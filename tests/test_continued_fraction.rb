@@ -3,7 +3,7 @@
 require 'test/unit'
 require 'bullshit'
 
-class ContinuedFractionTest < Test::Unit::TestCase
+class TestContinuedFraction < Test::Unit::TestCase
   include Bullshit
 
   def setup

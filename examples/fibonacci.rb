@@ -9,8 +9,8 @@ class FibonacciBenchmark < Bullshit::RepeatCase
 
   truncate_data do
     alpha_level 0.05
-    window_size 50
-    window_step 50 # defaults to window_size, but anyway
+    window_size 10
+    slope_angle 0.003
   end
 
   output_dir 'data'

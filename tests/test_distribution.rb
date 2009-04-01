@@ -3,7 +3,7 @@
 require 'test/unit'
 require 'bullshit'
 
-class DistributionTest < Test::Unit::TestCase
+class TestDistribution < Test::Unit::TestCase
   include Bullshit
 
   def setup

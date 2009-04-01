@@ -3,7 +3,7 @@
 require 'test/unit'
 require 'bullshit'
 
-class NewtonBisectionTest < Test::Unit::TestCase
+class TestNewtonBisection < Test::Unit::TestCase
   include Bullshit
 
   def test_bracket

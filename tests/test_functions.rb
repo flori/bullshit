@@ -3,7 +3,7 @@
 require 'test/unit'
 require 'bullshit'
 
-class DistributionTest < Test::Unit::TestCase
+class TestFunctions < Test::Unit::TestCase
   include Bullshit::Functions
 
   def gammaP5_2(x)

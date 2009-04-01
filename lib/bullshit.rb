@@ -43,32 +43,8 @@ module Bullshit
 
   Infinity = 1.0 / 0      # Refers to floating point infinity.
 
-  module ::Enumerable
-    # Let a window of size +window_size+ slide over this Enumerable using the
-    # step size +window_step+.
-    def each_window(window_size, window_step = 1)
-      window_size < 1 and raise ArgumentError, "window_size = #{window_size} < 1"
-      window_step < 1 and raise ArgumentError, "window_step = #{window_step} < 1"
-      window_step > window_size and raise ArgumentError,
-        "window_step = #{window_step} > #{window_size} = window_size"
-      window = []
-      each do |x|
-        if window.size == window_size
-          yield window
-          window = window[window_step, window_size]
-        end
-        window << x
-      end
-      window.empty? or yield window
-      nil
-    end unless method_defined?(:each_window)
-
-    # Return an Enumerator instance of +each_window+ with the given arguments
-    # +args+.
-    def enum_window(*args)
-      enum_for :each_window, *args
-    end unless method_defined?(:enum_window)
-  end
+  RUBY_DESCRIPTION = "ruby %s (%s patchlevel %s) [%s]" %
+    [ RUBY_VERSION, RUBY_RELEASE_DATE, RUBY_PATCHLEVEL, RUBY_PLATFORM ]
 
   # This class implements a continued fraction of the form:
   #
@@ -219,6 +195,36 @@ module Bullshit
     def percent(number)
       number / 100.0
     end
+
+    # Let a window of size +window_size+ slide over the array +array+ and yield
+    # to the window array.
+    def array_window(array, window_size)
+      window_size < 1 and raise ArgumentError, "window_size = #{window_size} < 1"
+      window_size = window_size.to_i
+      window_size += 1 if window_size % 2 == 0
+      radius = window_size / 2
+      array.each_index do |i|
+        ws = window_size
+        from = i - radius
+        negative_from = false
+        if from < 0
+          negative_from = true
+          ws += from
+          from = 0
+        end
+        a = array[from, ws]
+        if (diff = window_size - a.size) > 0
+          mean = a.inject(0.0) { |s, x| s + x } / a.size
+          a = if negative_from
+            [ mean ] * diff + a
+          else
+            a + [ mean ] * diff
+          end
+        end
+        yield a
+      end
+      nil
+    end
   end
 
   # An excpeption raised by the bullshit library.
@@ -322,6 +328,10 @@ module Bullshit
 
     # Last time object used for real time measurement.
     attr_reader :time
+
+    # Return all the slopes of linear regressions computed during data
+    # truncation phase.
+    attr_reader :slopes
 
     # Add the array +times+ to this clock's time measurements. +times+ consists
     # of the time measurements in float values in order of TIMES.
@@ -542,16 +552,19 @@ module Bullshit
     # return it as an integer.
     def find_truncation_offset
       truncation = self.case.truncate_data
+      slope_angle = self.case.truncate_data.slope_angle.abs
       time = self.case.compare_time.to_sym
-      ms = analysis[time].measurements
-      offset = 0
-      step = truncation.window_step || truncation.window_size
-      ms.each_window(truncation.window_size, step) do |data|
+      ms = analysis[time].measurements.reverse
+      offset = ms.size - 1
+      @slopes = []
+      ModuleFunctions.array_window(ms, truncation.window_size) do |data|
         lr = LinearRegression.new(data)
-        lr.slope_zero? and break
-        offset += step
+        a = lr.a
+        @slopes << [ offset, a ]
+        a.abs > slope_angle and break
+        offset -= 1
       end
-      offset
+      offset < 0 ? 0 : offset
     end
   end
 
@@ -789,6 +802,9 @@ module Bullshit
       0 / 0.0
     end
 
+    # Return an approximation of the regularized gammaQ function for +x+ and
+    # +a+ with an error of <= +epsilon+, but only iterate
+    # +max_iterations+-times.
     def gammaQ_regularized(x, a, epsilon = 1E-16, max_iterations = 1 << 16)
       x, a = x.to_f, a.to_f
       case
@@ -910,6 +926,7 @@ module Bullshit
 
   STD_NORMAL_DISTRIBUTION = NormalDistribution.new
 
+  # This class is used to compute the Chi-Square Distribution.
   class ChiSquareDistribution
     include Functions
 
@@ -1483,7 +1500,7 @@ module Bullshit
 
         dsl_accessor :window_size, 10
 
-        dsl_accessor :window_step
+        dsl_accessor :slope_angle, ModuleFunctions.angle(0.1)
 
         dsl_accessor :enabled, false
 
@@ -1689,6 +1706,7 @@ module Bullshit
     def run_once
       self.class.run_count(self.class.run_count + 1)
       self.class.output.puts Time.now.strftime(' %FT%T %Z ').center(COLUMNS, '=')
+      self.class.output.puts "Benchmarking on #{RUBY_DESCRIPTION}."
       self.class.output.puts self.class.message
       self.class.output.puts '=' * COLUMNS, ''
       @clocks.clear
@@ -1718,20 +1736,37 @@ module Bullshit
         end
         clock = run_method(bc_method)
         if self.class.truncate_data.enabled
+          message = ''
           offset = clock.find_truncation_offset
+          if clock.case.data_file
+            slopes_file_path = clock.file_path 'slopes'
+            message << "Writing slopes data file '#{slopes_file_path}'.\n"
+            File.open(slopes_file_path, 'w') do |slopes_file|
+              slopes_file.puts %w[#scatter slope] * "\t"
+              slopes_file.puts clock.slopes.map { |s| s * "\t" }
+            end
+          end
           case offset
           when 0
-            message = "No initial data truncated.\n =>"\
+            message << "No initial data truncated.\n =>"\
               " System may have been in a steady state from the beginning."
           when clock.repeat
-            message = "After truncating measurements no data would have"\
+            message << "After truncating measurements no data would have"\
               " remained.\n => No steady state could be detected."
           else
+            if clock.case.data_file
+              data_file_path = clock.file_path 'untruncated'
+              message << "Writing untruncated measurement data file '#{data_file_path}'.\n"
+              File.open(data_file_path, 'w') do |data_file|
+                data_file.puts clock.class.to_a * "\t"
+                data_file.puts clock.to_a.map { |times| times * "\t" }
+              end
+            end
             remaining = clock.repeat - offset
             offset_percentage = 100 * offset.to_f / clock.repeat
-            message = sprintf "Truncated initial %u measurements: "\
+            message << sprintf("Truncated initial %u measurements: "\
               "%u -> %u (-%0.2f%%).\n", offset, clock.repeat, remaining,
-              offset_percentage
+              offset_percentage)
             clock.truncate_data(offset)
           end
           self.class.output.puts evaluation(clock), message
@@ -1773,8 +1808,7 @@ module Bullshit
     # Write all output files after run.
     def write_files
       for clock in @clocks
-        if clock.case.data_file
-          data_file_path = clock.file_path
+        if clock.case.data_file data_file_path = clock.file_path
           self.class.output.puts "Writing measurement data file '#{data_file_path}'."
           File.open(data_file_path, 'w') do |data_file|
             data_file.puts clock.class.to_a * "\t"

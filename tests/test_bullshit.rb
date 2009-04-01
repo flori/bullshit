@@ -111,7 +111,7 @@ class RangeBenchmark < Bullshit::RangeCase
   include MyCases
 end
 
-class BullshitTest < Test::Unit::TestCase
+class TestBullshit < Test::Unit::TestCase
   include Bullshit
   Case.autorun false
 
