@@ -21,7 +21,7 @@ class TestWindow < Test::Unit::TestCase
     @c = (1..6).to_a
   end
 
-  def test_foo
+  def test_array_windows
     assert_equal [], array_windows(@e, 3)
     assert_equal [ [ 1.5, 1, 2 ], [ 1, 2, 3 ], [ 2, 3, 4 ], [ 3, 4, 5 ], [ 4, 5, 4.5 ] ],
       array_windows(@a, 3)
