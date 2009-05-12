@@ -140,7 +140,7 @@ module Bullshit
       result = c_1 / d_1
       n = 0
       error = 1 / 0.0
-      $DEBUG and warn "n=%u, a=%f, b=nil, p=%f, q=%f result=%f, error=nil" %
+      $DEBUG and warn "n=%u, a=%f, b=nil, c=%f, d=%f result=%f, error=nil" %
         [ n, c_1, c_1, d_1, result ]
       while n < max_iterations and error > epsilon
         n += 1
@@ -164,7 +164,7 @@ module Bullshit
 
         result = r
 
-        $DEBUG and warn "n=%u, a=%f, b=%f, p=%f, q=%f, result=%f, error=%.16f" %
+        $DEBUG and warn "n=%u, a=%f, b=%f, c=%f, d=%f, result=%f, error=%.16f" %
           [ n, a_n, b_n, c_1, d_1, result, error ]
 
         c_0, c_1 = c_1, c_2
