@@ -1606,11 +1606,6 @@ module Bullshit
       dsl_accessor :linear_regression, true
       
       include ModuleFunctions
-
-      def linear_regression_value(value = nil)
-        value and @linear_regression_value = value.to_f
-        @linear_regression_value ||= angle(1 / 60.0) # one angle minute
-      end
     end
 
     class << self
