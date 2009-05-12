@@ -1,5 +1,3 @@
-# vim: set et sw=2 ts=2:
-
 begin
   require 'rake/gempackagetask'
 rescue LoadError
@@ -85,5 +83,4 @@ end
 
 task :default => [ :version, :test ]
 
-task :release => [ :version, :clean, :package ]
-  # vim: set et sw=2 ts=2:
+task :release => [ :version, :clobber, :package ]

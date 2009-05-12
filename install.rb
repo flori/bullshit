@@ -13,4 +13,3 @@ mkdir_p subdir = File.join(libdir, 'bullshit')
 for f in Dir['lib/bullshit/*.rb']
   install(f, subdir)
 end
-    # vim: set et sw=4 ts=4:
