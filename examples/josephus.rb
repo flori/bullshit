@@ -124,8 +124,6 @@ class JosephusBenchmark < Bullshit::RepeatCase
     bins 20
   end
 
-  linear_regression_value angle(0.5)
-
   def benchmark_josephus_original
     chain = Original::Chain.new(N)
     chain.kill(3)
