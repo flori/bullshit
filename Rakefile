@@ -4,12 +4,15 @@ begin
   require 'rake/gempackagetask'
 rescue LoadError
 end
+require 'rake/clean'
 require 'rbconfig'
 include Config
 
 PKG_NAME = 'bullshit'
 PKG_VERSION = File.read('VERSION').chomp
 PKG_FILES = FileList['**/*'].exclude(/^(doc|CVS|pkg|coverage)/)
+CLEAN.include 'coverage', 'doc'
+CLOBBER.include FileList['data/*']
 
 desc "Run unit tests"
 task :test do
@@ -26,20 +29,10 @@ task :install  do
   ruby 'install.rb'
 end
 
+
 desc "Creating documentation"
 task :doc do
   ruby 'make_doc.rb'
-end
-
-desc "Removing generated files"
-task :clean => :clean_data do
-  rm_rf 'doc'
-  rm_rf 'coverage'
-end
-
-desc "Removing contents of data directory"
-task :clean_data do
-  rm_rf Dir['data/*']
 end
 
 if defined? Gem
