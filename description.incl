@@ -1,0 +1,6 @@
+<h2>Description</h2>
+<p>
+The Bullshit Benchmarking Library provides the means to measure, analyse,
+compare, and report the execution time of ruby code. It also provides
+statistical tests and values computed from the measured data.
+</p>

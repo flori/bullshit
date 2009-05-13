@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Bullshit::TDistribution</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Bullshit::TDistribution</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/bullshit_rb.html">
+                lib/bullshit.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+    <div id="diagram">
+      <map id="map" name="map">
+  <area shape="rect" coords="1344,207,1435,255"      href="RepeatCase.html" alt="RepeatCase" />
+  <area shape="rect" coords="1128,207,1208,255"      href="TimeCase.html" alt="TimeCase" />
+  <area shape="rect" coords="1232,207,1320,255"      href="RangeCase.html" alt="RangeCase" />
+  <area shape="rect" coords="1133,111,1205,159"      href="Case.html" alt="Case" />
+  <area shape="rect" coords="861,207,987,255"      href="NormalDistribution.html" alt="NormalDistribution" />
+  <area shape="rect" coords="1011,207,1104,255"      href="TDistribution.html" alt="TDistribution" />
+  <area shape="rect" coords="693,207,837,255"      href="ChiSquareDistribution.html" alt="ChiSquareDistribution" />
+  <area shape="rect" coords="904,5,1005,53"      href="../StandardError.html" alt="StandardError" />
+  <area shape="rect" coords="896,111,1013,159"      href="BullshitException.html" alt="BullshitException" />
+  <area shape="rect" coords="1459,207,1549,255"      href="Comparison.html" alt="Comparison" />
+  <area shape="rect" coords="1037,5,1109,53"      href="../Math.html" alt="Math" />
+  <area shape="rect" coords="731,111,845,159"      href="NewtonBisection.html" alt="NewtonBisection" />
+  <area shape="rect" coords="587,111,707,159"      href="LinearRegression.html" alt="LinearRegression" />
+  <area shape="rect" coords="491,111,563,159"      href="Clock.html" alt="Clock" />
+  <area shape="rect" coords="387,111,467,159"      href="Histogram.html" alt="Histogram" />
+  <area shape="rect" coords="240,111,363,159"      href="ContinuedFraction.html" alt="ContinuedFraction" />
+  <area shape="rect" coords="123,111,216,159"      href="CaseMethod.html" alt="CaseMethod" />
+  <area shape="rect" coords="27,111,99,159"      href="Analysis.html" alt="Analysis" />
+  <area shape="rect" coords="1456,99,1559,147"      href="ModuleFunctions.html" alt="ModuleFunctions" />
+  <area shape="rect" coords="1216,99,1323,147"      href="EvaluationModule.html" alt="EvaluationModule" />
+  <area shape="rect" coords="1333,99,1445,147"      href="CommonConstants.html" alt="CommonConstants" />
+  <area shape="rect" coords="1027,99,1120,147"      href="Functions.html" alt="Functions" />
+  <area shape="rect" coords="16,64,1569,265"      href="../Bullshit.html" alt="Bullshit" />
+</map>
+<img src="../../dot/f_0.png" usemap="#map" border="0" alt="dot/f_0.png">
+    </div>
+
+    <div id="description">
+      <p>
+This class is used to compute the T-Distribution.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000030">inverse_probability</a>&nbsp;&nbsp;
+      <a href="#M000028">new</a>&nbsp;&nbsp;
+      <a href="#M000029">probability</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Functions.html">Functions</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">df</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+Degrees of freedom.
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+          <a href="#M000028" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">(df)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a <a href="TDistribution.html">TDistribution</a> instance for the
+degrees of freedom <tt>df</tt>.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000028-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 846</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">df</span>)
+      <span class="ruby-ivar">@df</span> = <span class="ruby-identifier">df</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000030" class="method-detail">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+          <a href="#M000030" class="method-signature">
+          <span class="method-name">inverse_probability</span><span class="method-args">(p)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the inverse cumulative <a
+href="TDistribution.html#M000029">probability</a> (t-value) of the <a
+href="TDistribution.html">TDistribution</a> for the <a
+href="TDistribution.html#M000029">probability</a> <tt>p</tt>.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000030-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000030-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 870</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inverse_probability</span>(<span class="ruby-identifier">p</span>)
+      <span class="ruby-keyword kw">case</span>
+      <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+        <span class="ruby-value">-1</span> <span class="ruby-operator">/</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+      <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span>
+        <span class="ruby-value">1</span> <span class="ruby-operator">/</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+      <span class="ruby-keyword kw">else</span> 
+        <span class="ruby-keyword kw">begin</span>
+          <span class="ruby-identifier">bisect</span> = <span class="ruby-constant">NewtonBisection</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">probability</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">p</span> }
+          <span class="ruby-identifier">range</span> = <span class="ruby-identifier">bisect</span>.<span class="ruby-identifier">bracket</span>(<span class="ruby-value">-10</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>)
+          <span class="ruby-identifier">bisect</span>.<span class="ruby-identifier">solve</span>(<span class="ruby-identifier">range</span>, <span class="ruby-value">1_000_000</span>)
+        <span class="ruby-keyword kw">rescue</span>
+          <span class="ruby-value">0</span> <span class="ruby-operator">/</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000029" class="method-detail">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+          <a href="#M000029" class="method-signature">
+          <span class="method-name">probability</span><span class="method-args">(x)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the cumulative <a href="TDistribution.html#M000029">probability</a>
+(p-value) of the <a href="TDistribution.html">TDistribution</a> for the
+t-value <tt>x</tt>.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000029-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 855</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">probability</span>(<span class="ruby-identifier">x</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+        <span class="ruby-value">0</span><span class="ruby-value">.5</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">t</span> = <span class="ruby-identifier">beta_regularized</span>(<span class="ruby-ivar">@df</span> <span class="ruby-operator">/</span> (<span class="ruby-ivar">@df</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">**</span> <span class="ruby-value">2.0</span>), <span class="ruby-value">0</span><span class="ruby-value">.5</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@df</span>, <span class="ruby-value">0</span><span class="ruby-value">.5</span>)
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+          <span class="ruby-value">0</span><span class="ruby-value">.5</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-value">0</span><span class="ruby-value">.5</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

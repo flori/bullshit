@@ -1,0 +1,10 @@
+{
+  "author":"Florian Frank",
+  "author_email":"flori@ping.de",
+  "project_unixname":"bullshit",
+  "project_name":"Bullshit - Benchmarking for Ruby",
+  "project_url":"http://rubyforge.org/projects/bullshit",
+  "homepage_url":"http://bullshit.rubyforge.org",
+  "documentation_url":"doc/index.html",
+  "download_url":"http://rubyforge.org/frs/?group_id=8323"
+}
