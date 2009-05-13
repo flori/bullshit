@@ -38,14 +38,14 @@ end
 
 desc "Check the homepage with tidy."
 task :tidy_homepage do
-  sh "tidy -e index.html"
+  sh "tidy -e *index.html"
 end
 
 desc "Compile and check the homepage."
 task :homepage => [ :compile_homepage, :tidy_homepage ]
 
 desc "Publish the homepage to rubyforge."
-task :publish_rubyforge => [ :doc, :homepage ] do
-  sh "scp -r * rubyforge.org:/var/www/gforge-projects/#{$meta['project_unixname']}/"
+task :publish_rubyforge => :homepage do
+  sh "scp -r rubyforge_index.html rubyforge.org:/var/www/gforge-projects/#{$meta['project_unixname']}/index.html"
 end
   # vim: set et sw=2 ts=2:
