@@ -18,7 +18,7 @@
 #
 # The latest version of this library can be downloaded at
 #
-# * http://rubyforge.org/frs?group_id=XXX
+# * http://rubyforge.org/frs/?group_id=8323
 #
 # The homepage of this library is located at
 #
