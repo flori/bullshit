@@ -58,6 +58,13 @@ if defined? Gem
     s.rubyforge_project = "bullshit"
   end
 
+  desc 'Create a gemspec file'
+  task :gemspec do
+    File.open('bullshit.gemspec', 'w') do |f|
+      f.puts spec.to_yaml
+    end
+  end
+
   Rake::GemPackageTask.new(spec) do |pkg|
     pkg.need_tar = true
     pkg.package_files += PKG_FILES
@@ -83,4 +90,4 @@ end
 
 task :default => [ :version, :test ]
 
-task :release => [ :version, :clobber, :package ]
+task :release => [ :version, :clobber, :gemspec, :package ]
