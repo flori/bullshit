@@ -35,6 +35,7 @@ end
 
 if defined? Gem
   spec = %{
+    # -*- encoding: utf-8 -*-
     Gem::Specification.new do |s|
       s.name = 'bullshit'
       s.version = '#{PKG_VERSION}'
