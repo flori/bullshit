@@ -34,41 +34,42 @@ task :doc do
 end
 
 if defined? Gem
-  spec = %{
-    # -*- encoding: utf-8 -*-
-    Gem::Specification.new do |s|
-      s.name = 'bullshit'
-      s.version = '#{PKG_VERSION}'
-      s.summary = "Benchmarking is Bullshit"
-      s.description = ""
+  spec_src = <<GEM
+# -*- encoding: utf-8 -*-
+Gem::Specification.new do |s|
+  s.name = 'bullshit'
+  s.version = '#{PKG_VERSION}'
+  s.summary = "Benchmarking is Bullshit"
+  s.description = ""
 
-      s.add_dependency('dslkit', '>= 0.2.5')
+  s.add_dependency('dslkit', '>= 0.2.5')
 
-      s.files = #{PKG_FILES.to_a.inspect}
+  s.files = #{PKG_FILES.to_a.inspect}
 
-      s.require_path = 'lib'
+  s.require_path = 'lib'
 
-      s.has_rdoc = true
-      s.rdoc_options <<
-        '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
-        '--line-numbers'
-      s.test_files = #{Dir['tests/*.rb'].to_a.inspect}
+  s.has_rdoc = true
+  s.rdoc_options <<
+    '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
+    '--line-numbers'
+  s.test_files = #{Dir['tests/*.rb'].to_a.inspect}
 
-      s.author = "Florian Frank"
-      s.email = "flori@ping.de"
-      s.homepage = "http://bullshit.rubyforge.org"
-      s.rubyforge_project = "bullshit"
-    end
-  }
+  s.author = "Florian Frank"
+  s.email = "flori@ping.de"
+  s.homepage = "http://bullshit.rubyforge.org"
+  s.rubyforge_project = "bullshit"
+end
+GEM
 
   desc 'Create a gemspec file'
   task :gemspec do
     File.open('bullshit.gemspec', 'w') do |f|
-      f.puts spec
+      f.puts spec_src
     end
   end
 
-  Rake::GemPackageTask.new(eval(spec)) do |pkg|
+  spec = eval(spec_src)
+  Rake::GemPackageTask.new(spec) do |pkg|
     pkg.need_tar = true
     pkg.package_files += PKG_FILES
   end
