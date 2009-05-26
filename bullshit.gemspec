@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('dslkit', '>= 0.2.5')
 
-  s.files = ["tests", "tests/test_analysis.rb", "tests/test_functions.rb", "tests/test_distribution.rb", "tests/test_window.rb", "tests/test_continued_fraction.rb", "tests/test_bullshit.rb", "tests/test_newton_bisection.rb", "install.rb", "VERSION", "lib", "lib/bullshit.rb", "lib/bullshit", "lib/bullshit/version.rb", "make_doc.rb", "examples", "examples/compare.rb", "examples/josephus.rb", "examples/fibonacci.rb", "examples/sorting.rb", "examples/iteration.rb", "data", "bullshit.gemspec", "COPYING", "Rakefile"]
+  s.files = ["COPYING", "Rakefile", "VERSION", "bullshit.gemspec", "data", "examples", "examples/compare.rb", "examples/fibonacci.rb", "examples/iteration.rb", "examples/josephus.rb", "examples/sorting.rb", "install.rb", "lib", "lib/bullshit", "lib/bullshit.rb", "lib/bullshit/version.rb", "make_doc.rb", "tests", "tests/test_analysis.rb", "tests/test_bullshit.rb", "tests/test_continued_fraction.rb", "tests/test_distribution.rb", "tests/test_functions.rb", "tests/test_newton_bisection.rb", "tests/test_window.rb"]
 
   s.require_path = 'lib'
 
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.rdoc_options <<
     '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
     '--line-numbers'
-  s.test_files = ["tests/test_analysis.rb", "tests/test_functions.rb", "tests/test_distribution.rb", "tests/test_window.rb", "tests/test_continued_fraction.rb", "tests/test_bullshit.rb", "tests/test_newton_bisection.rb"]
+  s.test_files = ["tests/test_analysis.rb", "tests/test_bullshit.rb", "tests/test_continued_fraction.rb", "tests/test_distribution.rb", "tests/test_functions.rb", "tests/test_newton_bisection.rb", "tests/test_window.rb"]
 
   s.author = "Florian Frank"
   s.email = "flori@ping.de"

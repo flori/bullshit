@@ -44,7 +44,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('dslkit', '>= 0.2.5')
 
-  s.files = #{PKG_FILES.to_a.inspect}
+  s.files = #{PKG_FILES.to_a.sort.inspect}
 
   s.require_path = 'lib'
 
@@ -52,7 +52,7 @@ Gem::Specification.new do |s|
   s.rdoc_options <<
     '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
     '--line-numbers'
-  s.test_files = #{Dir['tests/*.rb'].to_a.inspect}
+  s.test_files = #{Dir['tests/*.rb'].to_a.sort.inspect}
 
   s.author = "Florian Frank"
   s.email = "flori@ping.de"
