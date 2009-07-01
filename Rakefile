@@ -27,7 +27,6 @@ task :install  do
   ruby 'install.rb'
 end
 
-
 desc "Creating documentation"
 task :doc do
   ruby 'make_doc.rb'
@@ -37,7 +36,7 @@ if defined? Gem
   spec_src = <<GEM
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
-  s.name = 'bullshit'
+  s.name = '#{PKG_NAME}'
   s.version = '#{PKG_VERSION}'
   s.summary = "Benchmarking is Bullshit"
   s.description = ""
@@ -56,14 +55,14 @@ Gem::Specification.new do |s|
 
   s.author = "Florian Frank"
   s.email = "flori@ping.de"
-  s.homepage = "http://bullshit.rubyforge.org"
-  s.rubyforge_project = "bullshit"
+  s.homepage = "http://#{PKG_NAME}.rubyforge.org"
+  s.rubyforge_project = "#{PKG_NAME}"
 end
 GEM
 
   desc 'Create a gemspec file'
   task :gemspec do
-    File.open('bullshit.gemspec', 'w') do |f|
+    File.open("#{PKG_NAME}.gemspec", 'w') do |f|
       f.puts spec_src
     end
   end
@@ -78,7 +77,7 @@ end
 desc m = "Writing version information for #{PKG_VERSION}"
 task :version do
   puts m
-  File.open(File.join('lib', 'bullshit', 'version.rb'), 'w') do |v|
+  File.open(File.join('lib', PKG_NAME, 'version.rb'), 'w') do |v|
     v.puts <<EOT
 module Bullshit
   # Bullshit version
@@ -92,6 +91,6 @@ EOT
   end
 end
 
-task :default => [ :version, :test ]
+task :default => [ :version, :gemspec, :test ]
 
-task :release => [ :version, :clobber, :gemspec, :package ]
+task :release => [ :clobber, :version, :gemspec, :package ]
