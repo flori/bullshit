@@ -1,11 +1,11 @@
 {
-  "project_unixname": "bullshit",
-  "documentation_url": "doc\/index.html",
   "author": "Florian Frank",
-  "project_name": "Benchmarking for Ruby",
-  "download_url": "http:\/\/rubyforge.org\/frs\/?group_id=8323",
-  "homepage_url": "http:\/\/flori.github.com\/bullshit",
-  "github_url": "http:\/\/github.com\/flori\/bullshit\/tree\/master",
   "author_email": "flori@ping.de",
+  "documentation_url": "doc\/index.html",
+  "download_url": "http:\/\/rubyforge.org\/frs\/?group_id=8323",
+  "github_url": "http:\/\/github.com\/flori\/bullshit\/tree\/master",
+  "homepage_url": "http:\/\/flori.github.com\/bullshit",
+  "project_name": "Benchmarking for Ruby",
+  "project_unixname": "bullshit",
   "project_url": "http:\/\/rubyforge.org\/projects\/bullshit"
 }

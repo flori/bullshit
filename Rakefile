@@ -48,4 +48,3 @@ desc "Publish the homepage to rubyforge."
 task :publish_rubyforge => :homepage do
   sh "scp -r rubyforge_index.html rubyforge.org:/var/www/gforge-projects/#{$meta['project_unixname']}/index.html"
 end
-  # vim: set et sw=2 ts=2:
