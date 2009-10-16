@@ -2193,42 +2193,66 @@ module Bullshit
       output.puts Time.now.strftime(' %FT%T %Z ').center(COLUMNS, '=')
       for comparator in [ :call_time_mean, :call_time_median ]
         output.puts
-        methods = compare_methods(comparator)
-        methods.size < 2 and return
-        max = methods.last.clock.__send__(comparator)
+        cmethods = compare_methods(comparator)
+        cmethods.size < 2 and return
+        max = cmethods.last.clock.__send__(comparator)
         output.puts "Comparing times (#{comparator}):"
-        methods.each_with_index do |m, i|
-          covers = []
-          for x in methods
-            if m != x and m.cover?(x)
-              j = 0
-              if methods.find { |y| j += 1; x == y }
-                my_case = m.case.class
-                iterations = m.clock.analysis[my_case.compare_time].suggested_sample_size(
-                  x.clock.analysis[my_case.compare_time], my_case.covering.alpha_level, my_case.covering.beta_level)
-                if iterations.nan? or iterations.infinite?
-                  covers << "#{j} (?)"
-                else
-                  min_iterations = iterations.ceil
-                  min_iterations >= 1E6 and min_iterations = "%f" % (1 / 0.0)
-                  covers << "#{j} (>=#{min_iterations})"
-                end
-              end
-            end
-          end
-          covers *= ', '
+        cmethods.each_with_index do |m, i|
           output.printf\
             "% 2u #{prefix_string(m)}\n   %17.9f"\
             " (%#{::Bullshit::Clock::TIMES_MAX}s) -> %8.3fx %s\n"\
             "   %17.9f\n",
             i + 1, m.clock.calls(comparator), m.case.class.compare_time,
-            max / m.clock.__send__(comparator), covers, m.clock.__send__(comparator)
+            max / m.clock.__send__(comparator), compute_covers(cmethods, m),
+            m.clock.__send__(comparator)
         end
         output.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) -> %8s  %s\n"\
                     "   %17s\n"\
                     % %w[calls/sec time speed covers secs/call]
+        display_speedup_matrix(cmethods, comparator)
       end
       output.puts '=' * COLUMNS
+    end
+
+    private
+
+    def display_speedup_matrix(cmethods, comparator)
+      output.print "\n", " " * 3
+      cmethods.size.times do |i|
+        output.printf "%7d ", i + 1
+      end
+      output.puts
+      cmethods.each_with_index do |x, i|
+        output.printf "%2d ", i + 1
+        cmethods.each do |y|
+          ratio = x.clock.calls(comparator).to_f / y.clock.calls(comparator)
+          ratio /= 0.0 if ratio >= 1000
+          output.printf "%7.2f ", ratio
+        end
+        output.puts
+      end
+    end
+
+    def compute_covers(cmethods, m)
+      covers = []
+      for x in cmethods
+        if m != x and m.cover?(x)
+          j = 0
+          if cmethods.find { |y| j += 1; x == y }
+            my_case = m.case.class
+            iterations = m.clock.analysis[my_case.compare_time].suggested_sample_size(
+              x.clock.analysis[my_case.compare_time], my_case.covering.alpha_level, my_case.covering.beta_level)
+            if iterations.nan? or iterations.infinite?
+              covers << "#{j} (?)"
+            else
+              min_iterations = iterations.ceil
+              min_iterations >= 1E6 and min_iterations = "%f" % (1 / 0.0)
+              covers << "#{j} (>=#{min_iterations})"
+            end
+          end
+        end
+      end
+      covers * ', '
     end
   end
 
