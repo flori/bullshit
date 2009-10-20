@@ -46,6 +46,7 @@ Gem::Specification.new do |s|
   s.files = #{PKG_FILES.to_a.sort.inspect}
 
   s.require_path = 'lib'
+  s.executables = 'bs_compare'
 
   s.has_rdoc = true
   s.rdoc_options <<
