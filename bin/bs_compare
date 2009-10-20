@@ -12,10 +12,10 @@ for filename in ARGV
   end
   basename = File.basename(filename)
   basename =~ /\A([^-]+)#([^-]+)\.dat\Z/ or next
-  bs_cases_methods << [ $1, $2 ]
+  bs_cases_methods << [ $1, $2, filename ]
 end
 Bullshit.compare do
-  bs_cases_methods.each do |c, m|
-    benchmark Object.const_get(c), m.to_sym, :load => yes
+  bs_cases_methods.each do |c, m, f|
+    benchmark Object.const_get(c), m.to_sym, :load => f
   end
 end

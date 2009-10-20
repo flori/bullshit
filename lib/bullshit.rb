@@ -1446,7 +1446,10 @@ module Bullshit
         end
       end
       self
+    rescue Errno::ENOENT
     end
+
+    alias to_s long_name
   end
 
   module CommonConstants
@@ -2155,12 +2158,16 @@ module Bullshit
       if comment = opts[:comment]
         bc_method.comment = comment
       end
-      @benchmark_methods << bc_method
       if file_path = opts[:load]
-        if file_path != true
-          bc_method.load file_path
+        success = if file_path != true
+          bc_method.load(file_path)
         else
           bc_method.load
+        end
+        if success
+          @benchmark_methods << bc_method
+        else
+          warn "Loading of #{bc_method} failed. Skipping to next."
         end
       else
         opts[:run] and bullshit_case.run false
