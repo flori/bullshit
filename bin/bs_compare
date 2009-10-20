@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'bullshit'
+Bullshit::Case.autorun false
+
+bs_cases_methods = []
+for filename in ARGV
+  if filename =~ /\.rb\Z/
+    warn "Loading #{filename}."
+    load filename
+    next
+  end
+  basename = File.basename(filename)
+  basename =~ /\A([^-]+)#([^-]+)\.dat\Z/ or next
+  bs_cases_methods << [ $1, $2 ]
+end
+Bullshit.compare do
+  bs_cases_methods.each do |c, m|
+    benchmark Object.const_get(c), m.to_sym, :load => yes
+  end
+end
