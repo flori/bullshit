@@ -2207,15 +2207,14 @@ module Bullshit
         cmethods.each_with_index do |m, i|
           output.printf\
             "% 2u #{prefix_string(m)}\n   %17.9f"\
-            " (%#{::Bullshit::Clock::TIMES_MAX}s) -> %8.3fx %s\n"\
+            " (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
             "   %17.9f\n",
             i + 1, m.clock.calls(comparator), m.case.class.compare_time,
-            max / m.clock.__send__(comparator), compute_covers(cmethods, m),
-            m.clock.__send__(comparator)
+            compute_covers(cmethods, m), m.clock.__send__(comparator)
         end
-        output.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) -> %8s  %s\n"\
+        output.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
                     "   %17s\n"\
-                    % %w[calls/sec time speed covers secs/call]
+                    % %w[calls/sec time covers secs/call]
         display_speedup_matrix(cmethods, comparator)
       end
       output.puts '=' * COLUMNS
