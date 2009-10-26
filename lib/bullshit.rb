@@ -2208,13 +2208,14 @@ module Bullshit
           output.printf\
             "% 2u #{prefix_string(m)}\n   %17.9f"\
             " (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
-            "   %17.9f\n",
+            "   %17.9f %8.2f\n",
             i + 1, m.clock.calls(comparator), m.case.class.compare_time,
-            compute_covers(cmethods, m), m.clock.__send__(comparator)
+            compute_covers(cmethods, m), m.clock.__send__(comparator),
+            m.clock.sample_standard_deviation_percentage(m.case.class.compare_time)
         end
         output.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
-                    "   %17s\n"\
-                    % %w[calls/sec time covers secs/call]
+                    "   %17s %8s\n"\
+                    % %w[calls/sec time covers secs/call std%]
         display_speedup_matrix(cmethods, comparator)
       end
       output.puts '=' * COLUMNS
