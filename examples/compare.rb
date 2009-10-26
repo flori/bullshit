@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bullshit'
-require File.join(File.dirname(__FILE__), 'fibonacci')
+load File.join(File.dirname(__FILE__), 'fibonacci.rb')
 
 FibonacciBenchmark.run # to demonstrate loading
 
