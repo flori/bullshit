@@ -1492,6 +1492,8 @@ module Bullshit
 
       dsl_accessor :batch_size, 1
 
+      dsl_accessor :comparison, true
+
       class TruncateData
         extend DSLKit::DSLAccessor
         extend DSLKit::Constant
@@ -1661,8 +1663,10 @@ module Bullshit
     # measure their running time.
     def initialize
       @clocks = []
-      @comparison = Comparison.new
-      @comparison.output self.class.output
+      if self.class.comparison
+        @comparison = Comparison.new
+        @comparison.output self.class.output
+      end
     end
 
     # Return the name of the benchmark case as a string.
@@ -1772,7 +1776,9 @@ module Bullshit
           self.class.output.puts evaluation(clock)
         end
         @clocks << clock
-        @comparison.benchmark(self, bc_method.short_name, :run => false)
+        if @comparison
+          @comparison.benchmark(self, bc_method.short_name, :run => false)
+        end
       end
       @clocks
     end
@@ -1782,12 +1788,12 @@ module Bullshit
 
     # Setup, run all benchmark cases (warmup and the real run) and output
     # results, run method speed comparisons, and teardown.
-    def run(comparison = true)
+    def run(do_compare = true)
       old_sync, self.class.output.sync = self.class.output.sync, true
       $DEBUG and warn "Calling setup."
       setup
       run_once
-      comparison and @comparison.display
+      do_compare and @comparison and @comparison.display
       self
     rescue => e
       warn "Caught #{e.class}: #{e}\n\n#{e.backtrace.map { |x| "\t#{x}\n" }}"
@@ -2130,7 +2136,7 @@ module Bullshit
     def benchmark(bc_class, method, opts = {})
       opts = { :run => true, :combine => true }.merge opts
       if Case === bc_class
-        bullshit_case, bc_class = bc_class, bullshit_case.class
+        bullshit_case, bc_class = bc_class, bc_class.class
         @cases[bc_class] ||= []
         if opts[:combine]
           if @cases[bc_class].empty?
@@ -2171,6 +2177,7 @@ module Bullshit
         end
       else
         opts[:run] and bullshit_case.run false
+        @benchmark_methods << bc_method
       end
       nil
     end
