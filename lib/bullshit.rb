@@ -1805,8 +1805,8 @@ module Bullshit
     end
 
     # Creates an instance of this class and run it.
-    def self.run
-      new.run
+    def self.run(do_compare = true)
+      new.run do_compare
     end
 
     # Write all output files after run.
