@@ -1512,8 +1512,8 @@ module Bullshit
         def initialize(enable, &block)
           if block
             enable.nil? or raise ArgumentError, "block form doesn't take an argument"
-            instance_eval(&block)
             enabled true
+            instance_eval(&block)
           else
             enabled enable.nil? ? false : enable
           end
@@ -1561,8 +1561,8 @@ module Bullshit
         def initialize(enable = nil, &block)
           if block
             enable.nil? or raise ArgumentError, "block form doesn't take an argument"
-            instance_eval(&block)
             enabled true
+            instance_eval(&block)
           else
             enabled enable.nil? ? true : enable
           end
