@@ -463,6 +463,11 @@ module Bullshit
       define_method(time) { analysis[time].sum }
     end
 
+    # Returns the sum of measurement times for +time+.
+    def sum(time)
+      __send__ time
+    end
+
     # Seconds per call (mean)
     def call_time_mean
       mean(self.case.compare_time)
@@ -1889,7 +1894,7 @@ module Bullshit
   module EvaluationModule
     def statistics_table(clock)
       result = ' ' * NAME_COLUMN_SIZE << ('%17s ' * 4) % times << "\n"
-      result << evaluation_line('sum', times.map { |t| clock.__send__(t) })
+      result << evaluation_line('sum', times.map { |t| clock.sum(t) })
       result << evaluation_line('min', times.map { |t| clock.min(t) })
       result << evaluation_line('std-', times.map { |t| clock.arithmetic_mean(t) - clock.sample_standard_deviation(t) })
       result << evaluation_line('mean', times.map { |t| clock.arithmetic_mean(t) })
@@ -2215,14 +2220,15 @@ module Bullshit
           output.printf\
             "% 2u #{prefix_string(m)}\n   %17.9f"\
             " (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
-            "   %17.9f %8.2f\n",
+            "   %17.9f %8.2f %17.9f\n",
             i + 1, m.clock.calls(comparator), m.case.class.compare_time,
             compute_covers(cmethods, m), m.clock.__send__(comparator),
-            m.clock.sample_standard_deviation_percentage(m.case.class.compare_time)
+            m.clock.sample_standard_deviation_percentage(m.case.class.compare_time),
+            m.clock.sum(m.case.class.compare_time)
         end
         output.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
-                    "   %17s %8s\n"\
-                    % %w[calls/sec time covers secs/call std%]
+                    "   %17s %8s %17s\n"\
+                    % %w[calls/sec time covers secs/call std% sum]
         display_speedup_matrix(cmethods, comparator)
       end
       output.puts '=' * COLUMNS
