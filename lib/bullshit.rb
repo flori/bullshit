@@ -1,32 +1,3 @@
-# = Bullshit - Benchmarking in Ruby
-#
-# == Description
-#
-# == Usage
-#
-# == Author
-#
-# Florian Frank mailto:flori@ping.de
-#
-# == License
-#
-# This is free software; you can redistribute it and/or modify it under the
-# terms of the GNU General Public License Version 2 as published by the Free
-# Software Foundation: www.gnu.org/copyleft/gpl.html
-#
-# == Download
-#
-# The latest version of this library can be downloaded at
-#
-# * http://rubyforge.org/frs/?group_id=8323
-#
-# The homepage of this library is located at
-#
-# * http://bullshit.rubyforge.org
-# 
-# == Example
-#
-
 require 'dslkit'
 require 'enumerator'
 
@@ -1306,11 +1277,11 @@ module Bullshit
     # This method tries to detect autocorrelation with the Ljung-Box
     # statistic. If enough lags can be considered it returns a hash with
     # results, otherwise nil is returned. The keys are
-    #   :lags: the number of lags,
-    #   :alpha_level: the alpha level for the test,
-    #   :q: the value of the ljung_box_statistic,
-    #   :p: the p-value computed, if p is higher than alpha no correlation was detected,
-    #   :detected: true if a correlation was found.
+    # :lags:: the number of lags,
+    # :alpha_level:: the alpha level for the test,
+    # :q:: the value of the ljung_box_statistic,
+    # :p:: the p-value computed, if p is higher than alpha no correlation was detected,
+    # :detected:: true if a correlation was found.
     def detect_autocorrelation(lags = 20, alpha_level = 0.05)
       if q = ljung_box_statistic(lags)
         p = ChiSquareDistribution.new(lags).probability(q)

@@ -48,8 +48,7 @@ if defined? Gem
 
     s.has_rdoc = true
     s.rdoc_options <<
-      '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
-      '--line-numbers'
+      '--title' <<  'Bullshit -- Benchmarking in Ruby' << '--main' << 'README'
     s.test_files = Dir['tests/*.rb']
 
     s.author = "Florian Frank"

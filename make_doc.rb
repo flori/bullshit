@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 
 puts "Creating documentation."
-system "rdoc -S -d #{Dir['lib/**/*.rb'] * ' '}"
+system "rdoc --main README --title 'Bullshit -- Benchmarking in Ruby'"\
+  " -d #{Dir['lib/**/*.rb'] * ' '}"
