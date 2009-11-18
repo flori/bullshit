@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Bullshit::NewtonBisection</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/bullshit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/bullshit.rb">lib/bullshit.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000056">::new</a></li>
+					
+					<li><a href="#M000057">#bracket</a></li>
+					
+					<li><a href="#M000058">#solve</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Bullshit.html">Bullshit</a></li>
+				
+					<li><a href="../Bullshit/Analysis.html">Bullshit::Analysis</a></li>
+				
+					<li><a href="../Bullshit/BullshitException.html">Bullshit::BullshitException</a></li>
+				
+					<li><a href="../Bullshit/Case.html">Bullshit::Case</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension.html">Bullshit::Case::CaseExtension</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Autocorrelation.html">Bullshit::Case::CaseExtension::Autocorrelation</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Covering.html">Bullshit::Case::CaseExtension::Covering</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Histogram.html">Bullshit::Case::CaseExtension::Histogram</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/TruncateData.html">Bullshit::Case::CaseExtension::TruncateData</a></li>
+				
+					<li><a href="../Bullshit/CaseMethod.html">Bullshit::CaseMethod</a></li>
+				
+					<li><a href="../Bullshit/ChiSquareDistribution.html">Bullshit::ChiSquareDistribution</a></li>
+				
+					<li><a href="../Bullshit/Clock.html">Bullshit::Clock</a></li>
+				
+					<li><a href="../Bullshit/CommonConstants.html">Bullshit::CommonConstants</a></li>
+				
+					<li><a href="../Bullshit/Comparison.html">Bullshit::Comparison</a></li>
+				
+					<li><a href="../Bullshit/ContinuedFraction.html">Bullshit::ContinuedFraction</a></li>
+				
+					<li><a href="../Bullshit/EvaluationModule.html">Bullshit::EvaluationModule</a></li>
+				
+					<li><a href="../Bullshit/Functions.html">Bullshit::Functions</a></li>
+				
+					<li><a href="../Bullshit/Histogram.html">Bullshit::Histogram</a></li>
+				
+					<li><a href="../Bullshit/LinearRegression.html">Bullshit::LinearRegression</a></li>
+				
+					<li><a href="../Bullshit/ModuleFunctions.html">Bullshit::ModuleFunctions</a></li>
+				
+					<li><a href="../Bullshit/NewtonBisection.html">Bullshit::NewtonBisection</a></li>
+				
+					<li><a href="../Bullshit/NormalDistribution.html">Bullshit::NormalDistribution</a></li>
+				
+					<li><a href="../Bullshit/RangeCase.html">Bullshit::RangeCase</a></li>
+				
+					<li><a href="../Bullshit/RepeatCase.html">Bullshit::RepeatCase</a></li>
+				
+					<li><a href="../Bullshit/TDistribution.html">Bullshit::TDistribution</a></li>
+				
+					<li><a href="../Bullshit/TimeCase.html">Bullshit::TimeCase</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Bullshit::NewtonBisection</h1>
+
+		<div id="description">
+			<p>
+This class is used to find the root of a function with Newton&#8217;s
+bisection method.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="function-attribute-method" class="method-detail">
+				<a name="function"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">function</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The function, passed into the constructor.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000056"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(&function)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a <a href="NewtonBisection.html">NewtonBisection</a> instance for
+<tt>function</tt>, a one-argument block.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 610</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">function</span>)
+      <span class="ruby-ivar">@function</span> = <span class="ruby-identifier">function</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="bracket-method" class="method-detail ">
+				<a name="M000057"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bracket</span><span
+						class="method-args">(range = -1..1, n = 50, factor = 1.6)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a bracket around a root, starting from the initial <tt>range</tt>.
+The method returns nil, if no such bracket around a root could be found
+after <tt>n</tt> tries with the scaling <tt>factor</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bracket-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 620</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bracket</span>(<span class="ruby-identifier">range</span> = <span class="ruby-value">-1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>, <span class="ruby-identifier">n</span> = <span class="ruby-value">50</span>, <span class="ruby-identifier">factor</span> =  <span class="ruby-value">1.6</span>)
+      <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">x2</span> = <span class="ruby-identifier">range</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-identifier">range</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_f</span>
+      <span class="ruby-identifier">x1</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;bad initial range #{range}&quot;</span>
+      <span class="ruby-identifier">f1</span>, <span class="ruby-identifier">f2</span> = <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">x1</span>], <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">x2</span>]
+      <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span>
+        <span class="ruby-identifier">f1</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">f2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">x1</span><span class="ruby-operator">..</span><span class="ruby-identifier">x2</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">f1</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">f2</span>.<span class="ruby-identifier">abs</span>
+          <span class="ruby-identifier">f1</span> = <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">x1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">factor</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">x1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x2</span>)]
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">f2</span> = <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">x2</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">factor</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">x2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x1</span>)]
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">return</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="solve-method" class="method-detail ">
+				<a name="M000058"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">solve</span><span
+						class="method-args">(range = nil, n = 1 << 16, epsilon = 1E-16)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Find the root of function in <tt>range</tt> and return it. The method
+raises a <a href="BullshitException.html">BullshitException</a>, if no such
+root could be found after <tt>n</tt> tries and in the <tt>epsilon</tt>
+environment.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="solve-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 638</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">solve</span>(<span class="ruby-identifier">range</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">n</span> = <span class="ruby-value">1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>, <span class="ruby-identifier">epsilon</span> = <span class="ruby-value">1E-16</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">range</span>
+        <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">x2</span> = <span class="ruby-identifier">range</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-identifier">range</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_f</span>
+        <span class="ruby-identifier">x1</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;bad initial range #{range}&quot;</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">range</span> = <span class="ruby-identifier">bracket</span>
+        <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">x2</span> = <span class="ruby-identifier">range</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">range</span>.<span class="ruby-identifier">last</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;bracket could not be determined&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">f</span> = <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">x1</span>]
+      <span class="ruby-identifier">fmid</span> = <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">x2</span>]
+      <span class="ruby-identifier">f</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">fmid</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;root must be bracketed in #{range}&quot;</span>
+      <span class="ruby-identifier">root</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+               <span class="ruby-identifier">dx</span> = <span class="ruby-identifier">x2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x1</span>
+               <span class="ruby-identifier">x1</span>
+             <span class="ruby-keyword kw">else</span>
+               <span class="ruby-identifier">dx</span> = <span class="ruby-identifier">x1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x2</span>
+               <span class="ruby-identifier">x2</span>
+             <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span>
+        <span class="ruby-identifier">fmid</span> = <span class="ruby-ivar">@function</span>[<span class="ruby-identifier">xmid</span> = <span class="ruby-identifier">root</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">dx</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0</span><span class="ruby-value">.5</span>)]
+        <span class="ruby-identifier">fmid</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">root</span> = <span class="ruby-identifier">xmid</span>
+        <span class="ruby-identifier">dx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">epsilon</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">fmid</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">root</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">BullshitException</span>, <span class="ruby-node">&quot;too many iterations (#{n})&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

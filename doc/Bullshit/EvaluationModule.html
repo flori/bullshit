@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Bullshit::EvaluationModule</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/bullshit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/bullshit.rb">lib/bullshit.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000161">#detect_autocorrelation</a></li>
+					
+					<li><a href="#M000160">#detect_outliers</a></li>
+					
+					<li><a href="#M000162">#evaluation_line</a></li>
+					
+					<li><a href="#M000159">#histogram</a></li>
+					
+					<li><a href="#M000158">#statistics_table</a></li>
+					
+					<li><a href="#M000163">#times</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Bullshit.html">Bullshit</a></li>
+				
+					<li><a href="../Bullshit/Analysis.html">Bullshit::Analysis</a></li>
+				
+					<li><a href="../Bullshit/BullshitException.html">Bullshit::BullshitException</a></li>
+				
+					<li><a href="../Bullshit/Case.html">Bullshit::Case</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension.html">Bullshit::Case::CaseExtension</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Autocorrelation.html">Bullshit::Case::CaseExtension::Autocorrelation</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Covering.html">Bullshit::Case::CaseExtension::Covering</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Histogram.html">Bullshit::Case::CaseExtension::Histogram</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/TruncateData.html">Bullshit::Case::CaseExtension::TruncateData</a></li>
+				
+					<li><a href="../Bullshit/CaseMethod.html">Bullshit::CaseMethod</a></li>
+				
+					<li><a href="../Bullshit/ChiSquareDistribution.html">Bullshit::ChiSquareDistribution</a></li>
+				
+					<li><a href="../Bullshit/Clock.html">Bullshit::Clock</a></li>
+				
+					<li><a href="../Bullshit/CommonConstants.html">Bullshit::CommonConstants</a></li>
+				
+					<li><a href="../Bullshit/Comparison.html">Bullshit::Comparison</a></li>
+				
+					<li><a href="../Bullshit/ContinuedFraction.html">Bullshit::ContinuedFraction</a></li>
+				
+					<li><a href="../Bullshit/EvaluationModule.html">Bullshit::EvaluationModule</a></li>
+				
+					<li><a href="../Bullshit/Functions.html">Bullshit::Functions</a></li>
+				
+					<li><a href="../Bullshit/Histogram.html">Bullshit::Histogram</a></li>
+				
+					<li><a href="../Bullshit/LinearRegression.html">Bullshit::LinearRegression</a></li>
+				
+					<li><a href="../Bullshit/ModuleFunctions.html">Bullshit::ModuleFunctions</a></li>
+				
+					<li><a href="../Bullshit/NewtonBisection.html">Bullshit::NewtonBisection</a></li>
+				
+					<li><a href="../Bullshit/NormalDistribution.html">Bullshit::NormalDistribution</a></li>
+				
+					<li><a href="../Bullshit/RangeCase.html">Bullshit::RangeCase</a></li>
+				
+					<li><a href="../Bullshit/RepeatCase.html">Bullshit::RepeatCase</a></li>
+				
+					<li><a href="../Bullshit/TDistribution.html">Bullshit::TDistribution</a></li>
+				
+					<li><a href="../Bullshit/TimeCase.html">Bullshit::TimeCase</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Bullshit::EvaluationModule</h1>
+
+		<div id="description">
+			<p>
+This module contains methods, that can be used in the evaluation method of
+benchmark cases.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="detect-autocorrelation-method" class="method-detail ">
+				<a name="M000161"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">detect_autocorrelation</span><span
+						class="method-args">(clock)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="detect-autocorrelation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1910</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">detect_autocorrelation</span>(<span class="ruby-identifier">clock</span>)
+      <span class="ruby-identifier">result</span> = <span class="ruby-value str">''</span>
+      <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">autocorrelation</span>.<span class="ruby-identifier">enabled</span> <span class="ruby-keyword kw">or</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">r</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">detect_autocorrelation</span>(<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">compare_time</span>)
+        <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\nLjung-Box statistics: q=%.5f (alpha=#{r[:alpha_level]},&quot;</span>\
+          <span class="ruby-node">&quot; df=#{r[:lags]}).\n&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">r</span>[<span class="ruby-identifier">:q</span>]
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">r</span>[<span class="ruby-identifier">:detected</span>]
+          <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;%.5f &gt;= %.5f =&gt; Autocorrelation was detected.\n&quot;</span> <span class="ruby-operator">%</span>
+            [ <span class="ruby-identifier">r</span>[<span class="ruby-identifier">:p</span>], <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">r</span>[<span class="ruby-identifier">:alpha_level</span>] ]
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;%.5f &lt; %.5f =&gt; No autocorrelation was detected.\n&quot;</span> <span class="ruby-operator">%</span>
+            [ <span class="ruby-identifier">r</span>[<span class="ruby-identifier">:p</span>], <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">r</span>[<span class="ruby-identifier">:alpha_level</span>] ]
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\nDidn't have enough lags to compute Ljung-Box statistics.\n&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="detect-outliers-method" class="method-detail ">
+				<a name="M000160"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">detect_outliers</span><span
+						class="method-args">(clock)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="detect-outliers-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1893</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">detect_outliers</span>(<span class="ruby-identifier">clock</span>)
+      <span class="ruby-identifier">result</span> = <span class="ruby-value str">''</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">detect_outliers</span> <span class="ruby-keyword kw">and</span>
+        <span class="ruby-identifier">outliers</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">detect_outliers</span>(<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">compare_time</span>)
+      <span class="ruby-keyword kw">then</span>
+        <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\nOutliers detected with box plot algo &quot;</span>\
+          <span class="ruby-value str">&quot;(median=%.5f, iqr=%.5f, factor=%.2f):\n&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">outliers</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-identifier">:median</span>, <span class="ruby-identifier">:iqr</span>, <span class="ruby-identifier">:factor</span>)
+        <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">outliers</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span>, <span class="ruby-operator">|</span>
+          [ <span class="ruby-identifier">:very_low</span>, <span class="ruby-identifier">:low</span>, <span class="ruby-identifier">:high</span>, <span class="ruby-identifier">:very_high</span> ].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">n</span>)
+        }.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{n}=#{v}&quot;</span> } <span class="ruby-operator">*</span> <span class="ruby-value str">' '</span>
+        <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\nNo outliers detected with box plot algo.\n&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="histogram-method" class="method-detail ">
+				<a name="M000159"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">histogram</span><span
+						class="method-args">(clock)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="histogram-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1885</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">histogram</span>(<span class="ruby-identifier">clock</span>)
+      <span class="ruby-identifier">result</span> = <span class="ruby-value str">&quot;\n&quot;</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">histogram</span>.<span class="ruby-identifier">enabled</span>
+        <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">histogram</span>(<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">compare_time</span>).<span class="ruby-identifier">display</span>(<span class="ruby-identifier">result</span>, <span class="ruby-value">50</span>)
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="statistics-table-method" class="method-detail ">
+				<a name="M000158"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">statistics_table</span><span
+						class="method-args">(clock)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="statistics-table-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1866</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">statistics_table</span>(<span class="ruby-identifier">clock</span>)
+      <span class="ruby-identifier">result</span> = <span class="ruby-value str">' '</span> <span class="ruby-operator">*</span> <span class="ruby-constant">NAME_COLUMN_SIZE</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-value str">'%17s '</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">times</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'sum'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'min'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">min</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'std-'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">arithmetic_mean</span>(<span class="ruby-identifier">t</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">sample_standard_deviation</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'mean'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">arithmetic_mean</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'std+'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">arithmetic_mean</span>(<span class="ruby-identifier">t</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">sample_standard_deviation</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'max'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">max</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'std'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">sample_standard_deviation</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'std%'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">sample_standard_deviation_percentage</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'harm'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">harmonic_mean</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'geo'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">geometric_mean</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'q1'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">percentile</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">25</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'med'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">median</span>(<span class="ruby-identifier">t</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-value str">'q3'</span>, <span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">percentile</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">75</span>) })
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">' '</span> <span class="ruby-operator">*</span> <span class="ruby-constant">NAME_COLUMN_SIZE</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;%17u %17.5f %17.9f\n&quot;</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">repeat</span>, <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">calls_mean</span>, <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">call_time_mean</span> ]
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">' '</span> <span class="ruby-operator">*</span> <span class="ruby-constant">NAME_COLUMN_SIZE</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;%17s %17s %17s\n&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-node">%w[calls calls/sec secs/call]</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="evaluation-line-method" class="method-detail ">
+				<a name="M000162"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">evaluation_line</span><span
+						class="method-args">(name, values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="evaluation-line-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1931</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">evaluation_line</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">values</span>)
+      <span class="ruby-identifier">name</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">NAME_COLUMN_SIZE</span>) <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-value str">'%17.9f '</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="times-method" class="method-detail ">
+				<a name="M000163"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">times</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="times-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1935</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">times</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">times</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

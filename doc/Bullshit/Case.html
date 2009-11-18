@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Bullshit::Case</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/bullshit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/bullshit.rb">lib/bullshit.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Case/CaseExtension.html">Bullshit::Case::CaseExtension</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000141">::autorun_all</a></li>
+					
+					<li><a href="#M000139">::each</a></li>
+					
+					<li><a href="#M000136">::inherited</a></li>
+					
+					<li><a href="#M000142">::new</a></li>
+					
+					<li><a href="#M000137">::output_filename</a></li>
+					
+					<li><a href="#M000150">::run</a></li>
+					
+					<li><a href="#M000140">::run_all</a></li>
+					
+					<li><a href="#M000138">::run_count</a></li>
+					
+					<li><a href="#M000144">::sorted_bmethods</a></li>
+					
+					<li><a href="#M000146">#[]</a></li>
+					
+					<li><a href="#M000145">#bmethods</a></li>
+					
+					<li><a href="#M000154">#evaluation</a></li>
+					
+					<li><a href="#M000147">#longest_name</a></li>
+					
+					<li><a href="#M000155">#post_run</a></li>
+					
+					<li><a href="#M000152">#pre_run</a></li>
+					
+					<li><a href="#M000149">#run</a></li>
+					
+					<li><a href="#M000153">#run_method</a></li>
+					
+					<li><a href="#M000148">#run_once</a></li>
+					
+					<li><a href="#M000156">#setup</a></li>
+					
+					<li><a href="#M000157">#teardown</a></li>
+					
+					<li><a href="#M000143">#to_s</a></li>
+					
+					<li><a href="#M000151">#write_files</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Bullshit.html">Bullshit</a></li>
+				
+					<li><a href="../Bullshit/Analysis.html">Bullshit::Analysis</a></li>
+				
+					<li><a href="../Bullshit/BullshitException.html">Bullshit::BullshitException</a></li>
+				
+					<li><a href="../Bullshit/Case.html">Bullshit::Case</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension.html">Bullshit::Case::CaseExtension</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Autocorrelation.html">Bullshit::Case::CaseExtension::Autocorrelation</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Covering.html">Bullshit::Case::CaseExtension::Covering</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Histogram.html">Bullshit::Case::CaseExtension::Histogram</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/TruncateData.html">Bullshit::Case::CaseExtension::TruncateData</a></li>
+				
+					<li><a href="../Bullshit/CaseMethod.html">Bullshit::CaseMethod</a></li>
+				
+					<li><a href="../Bullshit/ChiSquareDistribution.html">Bullshit::ChiSquareDistribution</a></li>
+				
+					<li><a href="../Bullshit/Clock.html">Bullshit::Clock</a></li>
+				
+					<li><a href="../Bullshit/CommonConstants.html">Bullshit::CommonConstants</a></li>
+				
+					<li><a href="../Bullshit/Comparison.html">Bullshit::Comparison</a></li>
+				
+					<li><a href="../Bullshit/ContinuedFraction.html">Bullshit::ContinuedFraction</a></li>
+				
+					<li><a href="../Bullshit/EvaluationModule.html">Bullshit::EvaluationModule</a></li>
+				
+					<li><a href="../Bullshit/Functions.html">Bullshit::Functions</a></li>
+				
+					<li><a href="../Bullshit/Histogram.html">Bullshit::Histogram</a></li>
+				
+					<li><a href="../Bullshit/LinearRegression.html">Bullshit::LinearRegression</a></li>
+				
+					<li><a href="../Bullshit/ModuleFunctions.html">Bullshit::ModuleFunctions</a></li>
+				
+					<li><a href="../Bullshit/NewtonBisection.html">Bullshit::NewtonBisection</a></li>
+				
+					<li><a href="../Bullshit/NormalDistribution.html">Bullshit::NormalDistribution</a></li>
+				
+					<li><a href="../Bullshit/RangeCase.html">Bullshit::RangeCase</a></li>
+				
+					<li><a href="../Bullshit/RepeatCase.html">Bullshit::RepeatCase</a></li>
+				
+					<li><a href="../Bullshit/TDistribution.html">Bullshit::TDistribution</a></li>
+				
+					<li><a href="../Bullshit/TimeCase.html">Bullshit::TimeCase</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Bullshit::Case</h1>
+
+		<div id="description">
+			<p>
+This is the base class of all Benchmarking Cases.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="clocks-attribute-method" class="method-detail">
+				<a name="clocks"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">clocks</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The clock instances, that were used during a run of this benchmark case.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="autorun-all-method" class="method-detail ">
+				<a name="M000141"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">autorun_all</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Autorun all subclasses&#8217; instances, that is all <a
+href="../Bullshit.html">Bullshit</a> cases. If its autorun dsl_accessor is
+false or it has already run, don&#8217;t run the case.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="autorun-all-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1631</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">autorun_all</span>
+        <span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bc_class</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">bc_class</span>.<span class="ruby-identifier">autorun</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">bc_class</span>.<span class="ruby-identifier">run_count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">bc_class</span>.<span class="ruby-identifier">run</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="M000139"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Iterate over all subclasses of class <a href="Case.html">Case</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1616</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+        <span class="ruby-identifier">cases</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="inherited-method" class="method-detail ">
+				<a name="M000136"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inherited</span><span
+						class="method-args">(klass)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inherited-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1593</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inherited</span>(<span class="ruby-identifier">klass</span>)
+        <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">CaseExtension</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000142"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <a href="Case.html">Case</a> instance, that is used to run
+benchmark methods and measure their running time.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1640</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+      <span class="ruby-ivar">@clocks</span> = []
+      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">comparison</span>
+        <span class="ruby-ivar">@comparison</span> = <span class="ruby-constant">Comparison</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@comparison</span>.<span class="ruby-identifier">output</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="output-filename-method" class="method-detail ">
+				<a name="M000137"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">output_filename</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="output-filename-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1603</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">output_filename</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">output_dir</span>)
+        <span class="ruby-identifier">output</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>, <span class="ruby-value str">'a+'</span>)
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="run-method" class="method-detail ">
+				<a name="M000150"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run</span><span
+						class="method-args">(do_compare = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates an instance of this class and run it.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1784</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">do_compare</span> = <span class="ruby-keyword kw">true</span>)
+      <span class="ruby-identifier">new</span>.<span class="ruby-identifier">run</span> <span class="ruby-identifier">do_compare</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="run-all-method" class="method-detail ">
+				<a name="M000140"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_all</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run all subclasses&#8217; instances, that is all <a
+href="../Bullshit.html">Bullshit</a> cases, unless they already have run.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-all-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1622</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_all</span>
+        <span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bc_class</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">bc_class</span>.<span class="ruby-identifier">run_count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">bc_class</span>.<span class="ruby-identifier">run</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="run-count-method" class="method-detail ">
+				<a name="M000138"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_count</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the total number of run counts <tt><a
+href="Case.html#M000138">run_count</a></tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-count-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1609</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_count</span>
+        <span class="ruby-identifier">cases</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">run_count</span> }
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="sorted-bmethods-method" class="method-detail ">
+				<a name="M000144"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sorted_bmethods</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return all benchmark methods of this <a href="Case.html">Case</a> instance
+lexicographically sorted.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sorted-bmethods-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1655</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">sorted_bmethods</span>
+      <span class="ruby-identifier">instance_methods</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/\Abenchmark_/</span>).<span class="ruby-identifier">sort</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000146"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the <a href="CaseMethod.html">CaseMethod</a> instance for
+<tt>method_name</tt> or nil, if there isn&#8217;t any method of this name.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1672</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">method_name</span>)
+      <span class="ruby-identifier">method_name</span> = <span class="ruby-node">&quot;benchmark_#{method_name}&quot;</span>
+      <span class="ruby-identifier">bmethods</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">bm</span><span class="ruby-operator">|</span> <span class="ruby-identifier">bm</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">method_name</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="bmethods-method" class="method-detail ">
+				<a name="M000145"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bmethods</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return all benchmark methods of this <a href="Case.html">Case</a> instance
+in a random order.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bmethods-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1660</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bmethods</span>
+      <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@bmethods</span>
+        <span class="ruby-ivar">@bmethods</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">sorted_bmethods</span>.<span class="ruby-identifier">sort_by</span> <span class="ruby-keyword kw">do</span>
+          <span class="ruby-identifier">rand</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-ivar">@bmethods</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-constant">CaseMethod</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">n</span>, <span class="ruby-keyword kw">self</span>) }
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-ivar">@bmethods</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="evaluation-method" class="method-detail ">
+				<a name="M000154"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">evaluation</span><span
+						class="method-args">(clock)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method has to be implemented in subclasses, it should return the
+evaluation results of the benchmarks as a string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="evaluation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1841</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">evaluation</span>(<span class="ruby-identifier">clock</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-value str">&quot;has to be implemented in subclasses&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="longest-name-method" class="method-detail ">
+				<a name="M000147"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">longest_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the length of the <a href="Case.html#M000147">longest_name</a> of
+all these methods&#8217; names.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="longest-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1678</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">longest_name</span>
+      <span class="ruby-identifier">bmethods</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">bmethods</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">short_name</span>.<span class="ruby-identifier">size</span> }.<span class="ruby-identifier">max</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="post-run-method" class="method-detail ">
+				<a name="M000155"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">post_run</span><span
+						class="method-args">(bc_method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Output after <tt>bc_method</tt> is run.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="post-run-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1846</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">post_run</span>(<span class="ruby-identifier">bc_method</span>)
+      <span class="ruby-identifier">teardown_name</span> = <span class="ruby-identifier">bc_method</span>.<span class="ruby-identifier">teardown_name</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">teardown_name</span>
+        <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Calling #{teardown_name}.&quot;</span>
+        <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">bc_method</span>.<span class="ruby-identifier">teardown_name</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="pre-run-method" class="method-detail ">
+				<a name="M000152"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pre_run</span><span
+						class="method-args">(bc_method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Output before <tt>bc_method</tt> is run.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pre-run-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1818</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pre_run</span>(<span class="ruby-identifier">bc_method</span>)
+      <span class="ruby-identifier">setup_name</span> = <span class="ruby-identifier">bc_method</span>.<span class="ruby-identifier">setup_name</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">setup_name</span>
+        <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Calling #{setup_name}.&quot;</span>
+        <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">setup_name</span>)
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{bc_method.long_name}:&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="run-method" class="method-detail ">
+				<a name="M000149"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run</span><span
+						class="method-args">(do_compare = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Setup, run all benchmark cases (warmup and the real run) and output
+results, run method speed comparisons, and teardown.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1767</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">do_compare</span> = <span class="ruby-keyword kw">true</span>)
+      <span class="ruby-identifier">old_sync</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">sync</span>, <span class="ruby-keyword kw">true</span>
+      <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;Calling setup.&quot;</span>
+      <span class="ruby-identifier">setup</span>
+      <span class="ruby-identifier">run_once</span>
+      <span class="ruby-identifier">do_compare</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@comparison</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@comparison</span>.<span class="ruby-identifier">display</span>
+      <span class="ruby-keyword kw">self</span>
+    <span class="ruby-keyword kw">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Caught #{e.class}: #{e}\n\n#{e.backtrace.map { |x| &quot;\t#{x}\n&quot; }}&quot;</span>
+    <span class="ruby-keyword kw">ensure</span>
+      <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;Calling teardown.&quot;</span>
+      <span class="ruby-identifier">teardown</span>
+      <span class="ruby-ivar">@clocks</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">write_files</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-identifier">old_sync</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="run-method-method" class="method-detail ">
+				<a name="M000153"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_method</span><span
+						class="method-args">(bc_method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run only <a href="Case.html#M000152">pre_run</a> and <a
+href="Case.html#M000155">post_run</a> methods. Yield to the block, if one
+was given.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-method-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1829</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_method</span>(<span class="ruby-identifier">bc_method</span>)
+      <span class="ruby-identifier">pre_run</span> <span class="ruby-identifier">bc_method</span>
+      <span class="ruby-identifier">clock</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">clock_method</span>, <span class="ruby-identifier">bc_method</span>) <span class="ruby-keyword kw">do</span>
+        <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">bc_method</span>.<span class="ruby-identifier">name</span>)
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">bc_method</span>.<span class="ruby-identifier">clock</span> = <span class="ruby-identifier">clock</span>
+      <span class="ruby-identifier">post_run</span> <span class="ruby-identifier">bc_method</span>
+      <span class="ruby-identifier">clock</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="run-once-method" class="method-detail ">
+				<a name="M000148"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_once</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run benchmark case once and output results.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run-once-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1684</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_once</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">run_count</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">run_count</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">' %FT%T %Z '</span>).<span class="ruby-identifier">center</span>(<span class="ruby-constant">COLUMNS</span>, <span class="ruby-value str">'='</span>)
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Benchmarking on #{RUBY_DESCRIPTION}.&quot;</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">message</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">'='</span> <span class="ruby-operator">*</span> <span class="ruby-constant">COLUMNS</span>, <span class="ruby-value str">''</span>
+      <span class="ruby-ivar">@clocks</span>.<span class="ruby-identifier">clear</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">warmup</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:aggressive</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Aggressively run all benchmarks for warmup first.&quot;</span>, <span class="ruby-value str">''</span>
+        <span class="ruby-identifier">bmethods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bc_method</span><span class="ruby-operator">|</span>
+          <span class="ruby-constant">GC</span>.<span class="ruby-identifier">start</span>
+          <span class="ruby-identifier">clock</span> = <span class="ruby-identifier">run_method</span> <span class="ruby-identifier">bc_method</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">evaluation</span>(<span class="ruby-identifier">clock</span>)
+          <span class="ruby-constant">GC</span>.<span class="ruby-identifier">start</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Aggressive warmup done.&quot;</span>, <span class="ruby-value str">''</span>, <span class="ruby-value str">'='</span> <span class="ruby-operator">*</span> <span class="ruby-constant">COLUMNS</span>, <span class="ruby-value str">''</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">first</span> = <span class="ruby-keyword kw">true</span>
+      <span class="ruby-identifier">bmethods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bc_method</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first</span>
+          <span class="ruby-identifier">first</span> = <span class="ruby-keyword kw">false</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">'-'</span> <span class="ruby-operator">*</span> <span class="ruby-constant">COLUMNS</span>, <span class="ruby-value str">''</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">warmup</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;This first run is only for warmup.&quot;</span>
+          <span class="ruby-constant">GC</span>.<span class="ruby-identifier">start</span>
+          <span class="ruby-identifier">clock</span> = <span class="ruby-identifier">run_method</span> <span class="ruby-identifier">bc_method</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">evaluation</span>(<span class="ruby-identifier">clock</span>)
+          <span class="ruby-constant">GC</span>.<span class="ruby-identifier">start</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">clock</span> = <span class="ruby-identifier">run_method</span>(<span class="ruby-identifier">bc_method</span>)
+        <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">truncate_data</span>.<span class="ruby-identifier">enabled</span>
+          <span class="ruby-identifier">message</span> = <span class="ruby-value str">''</span>
+          <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">find_truncation_offset</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">data_file</span>
+            <span class="ruby-identifier">slopes_file_path</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">file_path</span> <span class="ruby-value str">'slopes'</span>
+            <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Writing slopes data file '#{slopes_file_path}'.\n&quot;</span>
+            <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">slopes_file_path</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">slopes_file</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">slopes_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%w[#scatter slope]</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span>
+              <span class="ruby-identifier">slopes_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">slopes</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span> }
+            <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">offset</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;No initial data truncated.\n =&gt;&quot;</span>\
+              <span class="ruby-value str">&quot; System may have been in a steady state from the beginning.&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">repeat</span>
+            <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;After truncating measurements no data would have&quot;</span>\
+              <span class="ruby-value str">&quot; remained.\n =&gt; No steady state could be detected.&quot;</span>
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">data_file</span>
+              <span class="ruby-identifier">data_file_path</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">file_path</span> <span class="ruby-value str">'untruncated'</span>
+              <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Writing untruncated measurement data file '#{data_file_path}'.\n&quot;</span>
+              <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">data_file_path</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data_file</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span>
+                <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">times</span><span class="ruby-operator">|</span> <span class="ruby-identifier">times</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span> }
+              <span class="ruby-keyword kw">end</span>
+            <span class="ruby-keyword kw">end</span>
+            <span class="ruby-identifier">remaining</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">repeat</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">offset</span>
+            <span class="ruby-identifier">offset_percentage</span> = <span class="ruby-value">100</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">repeat</span>
+            <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;Truncated initial %u measurements: &quot;</span>\
+              <span class="ruby-value str">&quot;%u -&gt; %u (-%0.2f%%).\n&quot;</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">repeat</span>, <span class="ruby-identifier">remaining</span>,
+              <span class="ruby-identifier">offset_percentage</span>)
+            <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">truncate_data</span>(<span class="ruby-identifier">offset</span>)
+          <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">evaluation</span>(<span class="ruby-identifier">clock</span>), <span class="ruby-identifier">message</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">evaluation</span>(<span class="ruby-identifier">clock</span>)
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-ivar">@clocks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">clock</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@comparison</span>
+          <span class="ruby-ivar">@comparison</span>.<span class="ruby-identifier">benchmark</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">bc_method</span>.<span class="ruby-identifier">short_name</span>, <span class="ruby-identifier">:run</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-ivar">@clocks</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="setup-method" class="method-detail ">
+				<a name="M000156"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">setup</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+General setup for all the benchmark methods.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="setup-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1855</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="teardown-method" class="method-detail ">
+				<a name="M000157"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">teardown</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+General teardown for all the benchmark methods.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="teardown-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1859</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">teardown</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="M000143"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the name of the benchmark case as a string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1649</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">benchmark_name</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="write-files-method" class="method-detail ">
+				<a name="M000151"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_files</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Write all output files after run.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="write-files-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1789</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_files</span>
+      <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">clock</span> <span class="ruby-keyword kw">in</span> <span class="ruby-ivar">@clocks</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">data_file</span> <span class="ruby-identifier">data_file_path</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">file_path</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Writing measurement data file '#{data_file_path}'.&quot;</span>
+          <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">data_file_path</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data_file</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span>
+            <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">times</span><span class="ruby-operator">|</span> <span class="ruby-identifier">times</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span> }
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">histogram</span>.<span class="ruby-identifier">enabled</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">histogram</span>.<span class="ruby-identifier">file</span>
+          <span class="ruby-identifier">histogram_file_path</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">file_path</span> <span class="ruby-value str">'histogram'</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Writing histogram file '#{histogram_file_path}'.&quot;</span>
+          <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">histogram_file_path</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data_file</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%w[#binleft frequency binright]</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span>
+            <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">histogram</span>(<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">compare_time</span>).<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">times</span><span class="ruby-operator">|</span> <span class="ruby-identifier">times</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span> }
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">autocorrelation</span>.<span class="ruby-identifier">enabled</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">autocorrelation</span>.<span class="ruby-identifier">file</span>
+          <span class="ruby-identifier">ac_plot_file_path</span> = <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">file_path</span> <span class="ruby-value str">'autocorrelation'</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Writing autocorrelation plot file '#{ac_plot_file_path}'.&quot;</span>
+          <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">ac_plot_file_path</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data_file</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%w[#lag autocorrelation]</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span>
+            <span class="ruby-identifier">data_file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">autocorrelation_plot</span>(<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">compare_time</span>).<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ac</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ac</span> <span class="ruby-operator">*</span> <span class="ruby-value str">&quot;\t&quot;</span> }
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
