@@ -33,42 +33,31 @@ task :doc do
 end
 
 if defined? Gem
-  spec_src = <<GEM
-# -*- encoding: utf-8 -*-
-Gem::Specification.new do |s|
-  s.name = '#{PKG_NAME}'
-  s.version = '#{PKG_VERSION}'
-  s.summary = "Benchmarking is Bullshit"
-  s.description = ""
+  spec = Gem::Specification.new do |s|
+    s.name = PKG_NAME
+    s.version = PKG_VERSION
+    s.summary = "Benchmarking is Bullshit"
+    s.description = ""
 
-  s.add_dependency('dslkit', '>= 0.2.5')
+    s.add_dependency('dslkit', '>= 0.2.5')
 
-  s.files = #{PKG_FILES.to_a.sort.inspect}
+    s.files = PKG_FILES
 
-  s.require_path = 'lib'
-  s.executables = 'bs_compare'
+    s.require_path = 'lib'
+    s.executables = 'bs_compare'
 
-  s.has_rdoc = true
-  s.rdoc_options <<
-    '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
-    '--line-numbers'
-  s.test_files = #{Dir['tests/*.rb'].to_a.sort.inspect}
+    s.has_rdoc = true
+    s.rdoc_options <<
+      '--title' <<  'Bullshit -- Benchmarking in Ruby' <<
+      '--line-numbers'
+    s.test_files = Dir['tests/*.rb']
 
-  s.author = "Florian Frank"
-  s.email = "flori@ping.de"
-  s.homepage = "http://flori.github.com/#{PKG_NAME}"
-  s.rubyforge_project = "#{PKG_NAME}"
-end
-GEM
-
-  desc 'Create a gemspec file'
-  task :gemspec do
-    File.open("#{PKG_NAME}.gemspec", 'w') do |f|
-      f.puts spec_src
-    end
+    s.author = "Florian Frank"
+    s.email = "flori@ping.de"
+    s.homepage = "http://flori.github.com/#{PKG_NAME}"
+    s.rubyforge_project = PKG_NAME
   end
 
-  spec = eval(spec_src)
   Rake::GemPackageTask.new(spec) do |pkg|
     pkg.need_tar = true
     pkg.package_files += PKG_FILES
@@ -92,6 +81,6 @@ EOT
   end
 end
 
-task :default => [ :version, :gemspec, :test ]
+task :default => [ :version, :test ]
 
-task :release => [ :clobber, :version, :gemspec, :package ]
+task :release => [ :clobber, :version, :package ]
