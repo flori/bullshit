@@ -59,8 +59,3 @@ end
 
 desc "Compile and check the homepage."
 task :homepage => [ :compile_homepage, :tidy_homepage ]
-
-desc "Publish the homepage to rubyforge."
-task :publish_rubyforge => :homepage do
-  sh "scp -r rubyforge_index.html rubyforge.org:/var/www/gforge-projects/#{$meta['project_unixname']}/index.html"
-end
