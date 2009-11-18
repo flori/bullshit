@@ -1,0 +1,12 @@
+[^header.incl]
+[^linkbox.incl]
+    <div id="content">
+      [^headline.incl]
+      <h2>Downloads</h2>
+      <ul>
+      [-for l, d in @downloads-]
+          <li><a href="[=l]">[=d]</a></li>
+      [-end-]
+      </ul>
+    </div>
+[^footer.incl]

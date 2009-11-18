@@ -1,6 +1,7 @@
-require 'flott'
 require 'json'
+require 'flott'
 include Flott
+require 'open-uri'
 
 $meta = JSON.parse(File.read('meta.json'))
 
@@ -21,7 +22,7 @@ task :doc do
 end
 
 desc "Compile the homepage."
-task :compile_homepage do
+task :compile_homepage => :fetch_downloads do
   env = Environment.new
   env.update($meta)
   for tmpl in Dir['*.tmpl']
@@ -33,6 +34,21 @@ task :compile_homepage do
       fp = Parser.from_filename(tmpl)
       fp.evaluate(env)
     end
+  end
+end
+
+desc "Fetch download files"
+task :fetch_downloads do
+  url = 'http://www.ping.de/~flori/'
+  open(url) do |dir|
+    $meta['downloads'] =
+      dir.read.scan(/href="([^"]+)"/i).select do |d,|
+        d =~ /\A#{$meta['project_unixname']}/
+      end.map { |a| a.first }.sort_by do |v|
+        v[/-((?:\d+\.){2}\d+)/, 1].split('.').map { |x| x.to_i }
+      end.reverse.map do |d|
+        [ url + d, d ]
+      end
   end
 end
 
