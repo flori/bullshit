@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Bullshit::Analysis</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/bullshit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/bullshit.rb">lib/bullshit.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000080">::new</a></li>
+					
+					<li><a href="#M000090">#arithmetic_mean</a></li>
+					
+					<li><a href="#M000108">#autocorrelation</a></li>
+					
+					<li><a href="#M000107">#autovariance</a></li>
+					
+					<li><a href="#M000100">#common_standard_deviation</a></li>
+					
+					<li><a href="#M000101">#common_variance</a></li>
+					
+					<li><a href="#M000102">#compute_student_df</a></li>
+					
+					<li><a href="#M000098">#compute_welch_df</a></li>
+					
+					<li><a href="#M000106">#confidence_interval</a></li>
+					
+					<li><a href="#M000105">#cover?</a></li>
+					
+					<li><a href="#M000111">#detect_autocorrelation</a></li>
+					
+					<li><a href="#M000112">#detect_outliers</a></li>
+					
+					<li><a href="#M000109">#durbin_watson_statistic</a></li>
+					
+					<li><a href="#M000093">#geometric_mean</a></li>
+					
+					<li><a href="#M000092">#harmonic_mean</a></li>
+					
+					<li><a href="#M000114">#histogram</a></li>
+					
+					<li><a href="#M000113">#linear_regression</a></li>
+					
+					<li><a href="#M000110">#ljung_box_statistic</a></li>
+					
+					<li><a href="#M000095">#max</a></li>
+					
+					<li><a href="#M000091">#mean</a></li>
+					
+					<li><a href="#M000097">#median</a></li>
+					
+					<li><a href="#M000094">#min</a></li>
+					
+					<li><a href="#M000096">#percentile</a></li>
+					
+					<li><a href="#M000087">#sample_standard_deviation</a></li>
+					
+					<li><a href="#M000088">#sample_standard_deviation_percentage</a></li>
+					
+					<li><a href="#M000083">#sample_variance</a></li>
+					
+					<li><a href="#M000081">#size</a></li>
+					
+					<li><a href="#M000085">#standard_deviation</a></li>
+					
+					<li><a href="#M000086">#standard_deviation_percentage</a></li>
+					
+					<li><a href="#M000104">#suggested_sample_size</a></li>
+					
+					<li><a href="#M000089">#sum</a></li>
+					
+					<li><a href="#M000084">#sum_of_squares</a></li>
+					
+					<li><a href="#M000103">#t_student</a></li>
+					
+					<li><a href="#M000099">#t_welch</a></li>
+					
+					<li><a href="#M000082">#variance</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Bullshit.html">Bullshit</a></li>
+				
+					<li><a href="../Bullshit/Analysis.html">Bullshit::Analysis</a></li>
+				
+					<li><a href="../Bullshit/BullshitException.html">Bullshit::BullshitException</a></li>
+				
+					<li><a href="../Bullshit/Case.html">Bullshit::Case</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension.html">Bullshit::Case::CaseExtension</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Autocorrelation.html">Bullshit::Case::CaseExtension::Autocorrelation</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Covering.html">Bullshit::Case::CaseExtension::Covering</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Histogram.html">Bullshit::Case::CaseExtension::Histogram</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/TruncateData.html">Bullshit::Case::CaseExtension::TruncateData</a></li>
+				
+					<li><a href="../Bullshit/CaseMethod.html">Bullshit::CaseMethod</a></li>
+				
+					<li><a href="../Bullshit/ChiSquareDistribution.html">Bullshit::ChiSquareDistribution</a></li>
+				
+					<li><a href="../Bullshit/Clock.html">Bullshit::Clock</a></li>
+				
+					<li><a href="../Bullshit/CommonConstants.html">Bullshit::CommonConstants</a></li>
+				
+					<li><a href="../Bullshit/Comparison.html">Bullshit::Comparison</a></li>
+				
+					<li><a href="../Bullshit/ContinuedFraction.html">Bullshit::ContinuedFraction</a></li>
+				
+					<li><a href="../Bullshit/EvaluationModule.html">Bullshit::EvaluationModule</a></li>
+				
+					<li><a href="../Bullshit/Functions.html">Bullshit::Functions</a></li>
+				
+					<li><a href="../Bullshit/Histogram.html">Bullshit::Histogram</a></li>
+				
+					<li><a href="../Bullshit/LinearRegression.html">Bullshit::LinearRegression</a></li>
+				
+					<li><a href="../Bullshit/ModuleFunctions.html">Bullshit::ModuleFunctions</a></li>
+				
+					<li><a href="../Bullshit/NewtonBisection.html">Bullshit::NewtonBisection</a></li>
+				
+					<li><a href="../Bullshit/NormalDistribution.html">Bullshit::NormalDistribution</a></li>
+				
+					<li><a href="../Bullshit/RangeCase.html">Bullshit::RangeCase</a></li>
+				
+					<li><a href="../Bullshit/RepeatCase.html">Bullshit::RepeatCase</a></li>
+				
+					<li><a href="../Bullshit/TDistribution.html">Bullshit::TDistribution</a></li>
+				
+					<li><a href="../Bullshit/TimeCase.html">Bullshit::TimeCase</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Bullshit::Analysis</h1>
+
+		<div id="description">
+			<p>
+This class is used to analyse the time measurements and compute their
+statistics.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="measurements-attribute-method" class="method-detail">
+				<a name="measurements"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">measurements</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Returns the array of measurements.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000080"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(measurements)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1023</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">measurements</span>)
+      <span class="ruby-ivar">@measurements</span> = <span class="ruby-identifier">measurements</span>
+      <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">freeze</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="arithmetic-mean-method" class="method-detail ">
+				<a name="M000090"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">arithmetic_mean</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the arithmetic mean of the measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="arithmetic-mean-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1080</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arithmetic_mean</span>
+      <span class="ruby-ivar">@arithmetic_mean</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">size</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Analysis.html#M000091">mean</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="autocorrelation-method" class="method-detail ">
+				<a name="M000108"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">autocorrelation</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the array of autocorrelation values c_k / c_0 (of length size - 1).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="autocorrelation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1252</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">autocorrelation</span>
+      <span class="ruby-identifier">c</span> = <span class="ruby-identifier">autovariance</span>
+      <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">size</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">/</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>] }
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="autovariance-method" class="method-detail ">
+				<a name="M000107"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">autovariance</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the array of autovariances (of length size - 1).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="autovariance-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1240</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">autovariance</span>
+      <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">s</span> = <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+        <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@measurements</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">arithmetic_mean</span>) <span class="ruby-operator">*</span> (<span class="ruby-ivar">@measurements</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">k</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">arithmetic_mean</span>)
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">size</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="common-standard-deviation-method" class="method-detail ">
+				<a name="M000100"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">common_standard_deviation</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an estimation of the common standard deviation of the measurements
+of this and <tt>other</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="common-standard-deviation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1182</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">common_standard_deviation</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">common_variance</span>(<span class="ruby-identifier">other</span>))
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="common-variance-method" class="method-detail ">
+				<a name="M000101"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">common_variance</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an estimation of the common variance of the measurements of this
+and <tt>other</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="common-variance-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1188</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">common_variance</span>(<span class="ruby-identifier">other</span>)
+      (<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">/</span>
+        (<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="compute-student-df-method" class="method-detail ">
+				<a name="M000102"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compute_student_df</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Compute the # degrees of freedom for Student&#8217;s t-test.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compute-student-df-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1194</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compute_student_df</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="compute-welch-df-method" class="method-detail ">
+				<a name="M000098"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compute_welch_df</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Use an approximation of the Welch-Satterthwaite equation to compute the
+degrees of freedom for Welch&#8217;s t-test.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compute-welch-df-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1163</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compute_welch_df</span>(<span class="ruby-identifier">other</span>)
+      (<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span>) <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">/</span> (
+        (<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">size</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>))) <span class="ruby-operator">+</span>
+        (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>))))
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="confidence-interval-method" class="method-detail ">
+				<a name="M000106"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">confidence_interval</span><span
+						class="method-args">(alpha = 0.05)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the confidence interval for the arithmetic mean with alpha level
+<tt>alpha</tt> of the measurements of this <a
+href="Analysis.html">Analysis</a> instance as a Range object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="confidence-interval-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1232</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">confidence_interval</span>(<span class="ruby-identifier">alpha</span> = <span class="ruby-value">0</span><span class="ruby-value">.05</span>)
+      <span class="ruby-identifier">td</span> = <span class="ruby-constant">TDistribution</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+      <span class="ruby-identifier">t</span> = <span class="ruby-identifier">td</span>.<span class="ruby-identifier">inverse_probability</span>(<span class="ruby-identifier">alpha</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">abs</span>
+      <span class="ruby-identifier">delta</span> = <span class="ruby-identifier">t</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">sample_standard_deviation</span> <span class="ruby-operator">/</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">size</span>)
+      (<span class="ruby-identifier">arithmetic_mean</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">delta</span>)<span class="ruby-operator">..</span>(<span class="ruby-identifier">arithmetic_mean</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">delta</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="cover--method" class="method-detail ">
+				<a name="M000105"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cover?</span><span
+						class="method-args">(other, alpha = 0.05)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return true, if the <a href="Analysis.html">Analysis</a> instance covers
+the <tt>other</tt>, that is their arithmetic mean value is most likely to
+be equal for the <tt>alpha</tt> error level.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cover--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1224</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cover?</span>(<span class="ruby-identifier">other</span>, <span class="ruby-identifier">alpha</span> = <span class="ruby-value">0</span><span class="ruby-value">.05</span>)
+      <span class="ruby-identifier">t</span> = <span class="ruby-identifier">t_welch</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-identifier">td</span> = <span class="ruby-constant">TDistribution</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">compute_welch_df</span>(<span class="ruby-identifier">other</span>))
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">td</span>.<span class="ruby-identifier">inverse_probability</span>(<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">alpha</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">/</span> <span class="ruby-value">2.0</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="detect-autocorrelation-method" class="method-detail ">
+				<a name="M000111"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">detect_autocorrelation</span><span
+						class="method-args">(lags = 20, alpha_level = 0.05)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method tries to detect autocorrelation with the Ljung-Box statistic.
+If enough lags can be considered it returns a hash with results, otherwise
+nil is returned. The keys are
+</p>
+<table>
+<tr><td valign="top">:lags:</td><td>the number of lags,
+
+</td></tr>
+<tr><td valign="top">:alpha_level:</td><td>the alpha level for the test,
+
+</td></tr>
+<tr><td valign="top">:q:</td><td>the value of the <a href="Analysis.html#M000110">ljung_box_statistic</a>,
+
+</td></tr>
+<tr><td valign="top">:p:</td><td>the p-value computed, if p is higher than alpha no correlation was
+detected,
+
+</td></tr>
+<tr><td valign="top">:detected:</td><td>true if a correlation was found.
+
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="detect-autocorrelation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1285</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">detect_autocorrelation</span>(<span class="ruby-identifier">lags</span> = <span class="ruby-value">20</span>, <span class="ruby-identifier">alpha_level</span> = <span class="ruby-value">0</span><span class="ruby-value">.05</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">q</span> = <span class="ruby-identifier">ljung_box_statistic</span>(<span class="ruby-identifier">lags</span>)
+        <span class="ruby-identifier">p</span> = <span class="ruby-constant">ChiSquareDistribution</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lags</span>).<span class="ruby-identifier">probability</span>(<span class="ruby-identifier">q</span>)
+        <span class="ruby-keyword kw">return</span> {
+          <span class="ruby-identifier">:lags</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lags</span>,
+          <span class="ruby-identifier">:alpha_level</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">alpha_level</span>,
+          <span class="ruby-identifier">:q</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">q</span>,
+          <span class="ruby-identifier">:p</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">p</span>,
+          <span class="ruby-identifier">:detected</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">alpha_level</span>,
+        }
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="detect-outliers-method" class="method-detail ">
+				<a name="M000112"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">detect_outliers</span><span
+						class="method-args">(factor = 3.0, epsilon = 1E-5)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a result hash with the number of :very_low, :low, :high, and
+:very_high outliers, determined by the box plotting algorithm run with
+:median and :iqr parameters. If no outliers were found or the iqr is less
+than epsilon, nil is returned.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="detect-outliers-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1302</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">detect_outliers</span>(<span class="ruby-identifier">factor</span> = <span class="ruby-value">3.0</span>, <span class="ruby-identifier">epsilon</span> = <span class="ruby-value">1E-5</span>)
+      <span class="ruby-identifier">half_factor</span> = <span class="ruby-identifier">factor</span> <span class="ruby-operator">/</span> <span class="ruby-value">2.0</span>
+      <span class="ruby-identifier">quartile1</span> = <span class="ruby-identifier">percentile</span>(<span class="ruby-value">25</span>)
+      <span class="ruby-identifier">quartile3</span> = <span class="ruby-identifier">percentile</span>(<span class="ruby-value">75</span>)
+      <span class="ruby-identifier">iqr</span> = <span class="ruby-identifier">quartile3</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">quartile1</span>
+      <span class="ruby-identifier">iqr</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">epsilon</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>)) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">extreme</span> =
+          <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">t</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-operator">-</span><span class="ruby-constant">Infinity</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">quartile1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">factor</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">iqr</span>)
+            <span class="ruby-identifier">:very_low</span>
+          <span class="ruby-keyword kw">when</span> (<span class="ruby-identifier">quartile1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">factor</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">iqr</span>)<span class="ruby-operator">..</span>(<span class="ruby-identifier">quartile1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">half_factor</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">iqr</span>)
+            <span class="ruby-identifier">:low</span>
+          <span class="ruby-keyword kw">when</span> (<span class="ruby-identifier">quartile1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">half_factor</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">iqr</span>)<span class="ruby-operator">..</span>(<span class="ruby-identifier">quartile3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">factor</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">iqr</span>)
+            <span class="ruby-identifier">:high</span>
+          <span class="ruby-keyword kw">when</span> (<span class="ruby-identifier">quartile3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">factor</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">iqr</span>)<span class="ruby-operator">..</span><span class="ruby-constant">Infinity</span>
+            <span class="ruby-identifier">:very_high</span>
+          <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">extreme</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">h</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">result</span>[<span class="ruby-identifier">:median</span>] = <span class="ruby-identifier">median</span>
+        <span class="ruby-identifier">result</span>[<span class="ruby-identifier">:iqr</span>] = <span class="ruby-identifier">iqr</span>
+        <span class="ruby-identifier">result</span>[<span class="ruby-identifier">:factor</span>] = <span class="ruby-identifier">factor</span>
+        <span class="ruby-identifier">result</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="durbin-watson-statistic-method" class="method-detail ">
+				<a name="M000109"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">durbin_watson_statistic</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the d-value for the Durbin-Watson statistic. The value is d << 2
+for positive, d >> 2 for negative and d around 2 for no autocorrelation.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="durbin-watson-statistic-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1259</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">durbin_watson_statistic</span>
+      <span class="ruby-identifier">e</span> = <span class="ruby-identifier">linear_regression</span>.<span class="ruby-identifier">residues</span>
+      <span class="ruby-identifier">e</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span> <span class="ruby-value">2.0</span>
+      (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">e</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">e</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]) <span class="ruby-operator">**</span> <span class="ruby-value">2</span> } <span class="ruby-operator">/</span>
+        <span class="ruby-identifier">e</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="geometric-mean-method" class="method-detail ">
+				<a name="M000093"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">geometric_mean</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the geometric mean of the measurements. If any of the measurements
+is less than 0.0, this method returns NaN.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="geometric-mean-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1103</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">geometric_mean</span>
+      <span class="ruby-ivar">@geometric_mean</span> <span class="ruby-operator">||=</span> (
+        <span class="ruby-identifier">sum</span> = <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">case</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">log</span>(<span class="ruby-identifier">t</span>)
+          <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+            <span class="ruby-keyword kw">break</span> <span class="ruby-operator">:</span><span class="ruby-identifier">null</span>
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-keyword kw">end</span>
+        }
+        <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">sum</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:null</span>
+          <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Float</span>
+          <span class="ruby-constant">Math</span>.<span class="ruby-identifier">exp</span>(<span class="ruby-identifier">sum</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">size</span>)
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-value">0</span> <span class="ruby-operator">/</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+        <span class="ruby-keyword kw">end</span>
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="harmonic-mean-method" class="method-detail ">
+				<a name="M000092"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">harmonic_mean</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the harmonic mean of the measurements. If any of the measurements
+is less than or equal to 0.0, this method returns NaN.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="harmonic-mean-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1088</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">harmonic_mean</span>
+      <span class="ruby-ivar">@harmonic_mean</span> <span class="ruby-operator">||=</span> (
+        <span class="ruby-identifier">sum</span> = <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">t</span>
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-keyword kw">end</span>
+        }
+        <span class="ruby-identifier">sum</span> <span class="ruby-value">? </span><span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span> <span class="ruby-operator">/</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="histogram-method" class="method-detail ">
+				<a name="M000114"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">histogram</span><span
+						class="method-args">(bins)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <a href="Histogram.html">Histogram</a> instance with
+<tt>bins</tt> as the number of bins for this analysis&#8217; measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="histogram-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1338</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">histogram</span>(<span class="ruby-identifier">bins</span>)
+      <span class="ruby-constant">Histogram</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">bins</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="linear-regression-method" class="method-detail ">
+				<a name="M000113"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">linear_regression</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the <a href="LinearRegression.html">LinearRegression</a> object for
+the equation a * x + b which represents the line computed by the linear
+regression algorithm.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="linear-regression-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1332</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">linear_regression</span>
+      <span class="ruby-ivar">@linear_regression</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">LinearRegression</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@measurements</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ljung-box-statistic-method" class="method-detail ">
+				<a name="M000110"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ljung_box_statistic</span><span
+						class="method-args">(lags = 20)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the q value of the Ljung-Box statistic for the number of lags
+<tt>lags</tt>. A higher value might indicate autocorrelation in the
+measurements of this <a href="Analysis.html">Analysis</a> instance. This
+method returns nil if there weren&#8217;t enough (at least lags) lags
+available.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ljung-box-statistic-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1270</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ljung_box_statistic</span>(<span class="ruby-identifier">lags</span> = <span class="ruby-value">20</span>)
+      <span class="ruby-identifier">r</span> = <span class="ruby-identifier">autocorrelation</span>
+      <span class="ruby-identifier">lags</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span>
+      <span class="ruby-identifier">n</span> = <span class="ruby-identifier">size</span>
+      <span class="ruby-identifier">n</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>) <span class="ruby-operator">*</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">lags</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">r</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="max-method" class="method-detail ">
+				<a name="M000095"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">max</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the maximum of the measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="max-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1132</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">max</span>
+      <span class="ruby-ivar">@max</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">max</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="mean-method" class="method-detail method-alias">
+				<a name="M000091"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mean</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alias for <a href="Analysis.html#M000090">arithmetic_mean</a>
+</p>
+					
+
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="median-method" class="method-detail method-alias">
+				<a name="M000097"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">median</span><span
+						class="method-args">(p = 50)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alias for <a href="Analysis.html#M000096">percentile</a>
+</p>
+					
+
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="min-method" class="method-detail ">
+				<a name="M000094"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">min</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the minimum of the measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="min-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1127</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">min</span>
+      <span class="ruby-ivar">@min</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">min</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="percentile-method" class="method-detail ">
+				<a name="M000096"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">percentile</span><span
+						class="method-args">(p = 50)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the <tt>p</tt>-percentile of the measurements. There are many
+methods to compute the percentile, this method uses the the weighted
+average at x_(n + 1)p, which allows p to be in 0...100 (excluding the 100).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="percentile-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1140</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">percentile</span>(<span class="ruby-identifier">p</span> = <span class="ruby-value">50</span>)
+      (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">100</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">p</span>) <span class="ruby-keyword kw">or</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;p = #{p}, but has to be in (0...100)&quot;</span>
+      <span class="ruby-identifier">p</span> <span class="ruby-operator">/=</span> <span class="ruby-value">100.0</span>
+      <span class="ruby-ivar">@sorted</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">sort</span>
+      <span class="ruby-identifier">r</span> = <span class="ruby-identifier">p</span> <span class="ruby-operator">*</span> (<span class="ruby-ivar">@sorted</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+      <span class="ruby-identifier">r_i</span> = <span class="ruby-identifier">r</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">r_f</span> = <span class="ruby-identifier">r</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">r_i</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">r_i</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@sorted</span>[<span class="ruby-identifier">r_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">r_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@sorted</span>.<span class="ruby-identifier">size</span>
+          <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">r_f</span> <span class="ruby-operator">*</span> (<span class="ruby-ivar">@sorted</span>[<span class="ruby-identifier">r_i</span>] <span class="ruby-operator">-</span> <span class="ruby-ivar">@sorted</span>[<span class="ruby-identifier">r_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>])
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@sorted</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Analysis.html#M000097">median</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="sample-standard-deviation-method" class="method-detail ">
+				<a name="M000087"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sample_standard_deviation</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the sample standard deviation of the measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sample-standard-deviation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1064</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sample_standard_deviation</span>
+      <span class="ruby-ivar">@sample_standard_deviation</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">sample_variance</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="sample-standard-deviation-percentage-method" class="method-detail ">
+				<a name="M000088"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sample_standard_deviation_percentage</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the sample standard deviation of the measurements in percentage of
+the arithmetic mean.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sample-standard-deviation-percentage-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1070</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sample_standard_deviation_percentage</span>
+      <span class="ruby-ivar">@sample_standard_deviation_percentage</span> <span class="ruby-operator">||=</span> <span class="ruby-value">100.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">sample_standard_deviation</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">arithmetic_mean</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="sample-variance-method" class="method-detail ">
+				<a name="M000083"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sample_variance</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the <a href="Analysis.html#M000083">sample_variance</a> of the
+measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sample-variance-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1042</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sample_variance</span>
+      <span class="ruby-ivar">@sample_variance</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">sum_of_squares</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1.0</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="size-method" class="method-detail ">
+				<a name="M000081"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the number of measurements, on which the analysis is based.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="size-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1032</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>
+      <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="standard-deviation-method" class="method-detail ">
+				<a name="M000085"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">standard_deviation</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the standard deviation of the measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="standard-deviation-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1053</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">standard_deviation</span>
+      <span class="ruby-ivar">@sample_deviation</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">variance</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="standard-deviation-percentage-method" class="method-detail ">
+				<a name="M000086"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">standard_deviation_percentage</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the standard deviation of the measurements in percentage of the
+arithmetic mean.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="standard-deviation-percentage-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1059</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">standard_deviation_percentage</span>
+      <span class="ruby-ivar">@standard_deviation_percentage</span> <span class="ruby-operator">||=</span> <span class="ruby-value">100.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">standard_deviation</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">arithmetic_mean</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="suggested-sample-size-method" class="method-detail ">
+				<a name="M000104"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">suggested_sample_size</span><span
+						class="method-args">(other, alpha = 0.05, beta = 0.05)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Compute a sample size, that will more likely yield a mean difference
+between this instance&#8217;s measurements and those of <tt>other</tt>. Use
+<tt>alpha</tt> and <tt>beta</tt> as levels for the first- and second-order
+errors.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="suggested-sample-size-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1211</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">suggested_sample_size</span>(<span class="ruby-identifier">other</span>, <span class="ruby-identifier">alpha</span> = <span class="ruby-value">0</span><span class="ruby-value">.05</span>, <span class="ruby-identifier">beta</span> = <span class="ruby-value">0</span><span class="ruby-value">.05</span>)
+      <span class="ruby-identifier">alpha</span>, <span class="ruby-identifier">beta</span> = <span class="ruby-identifier">alpha</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">beta</span>.<span class="ruby-identifier">abs</span>
+      <span class="ruby-identifier">signal</span> = <span class="ruby-identifier">arithmetic_mean</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">arithmetic_mean</span>
+      <span class="ruby-identifier">df</span> = <span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>
+      <span class="ruby-identifier">pooled_variance_estimate</span> = (<span class="ruby-identifier">sum_of_squares</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">sum_of_squares</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">df</span>
+      <span class="ruby-identifier">td</span> = <span class="ruby-constant">TDistribution</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">df</span>
+      (((<span class="ruby-identifier">td</span>.<span class="ruby-identifier">inverse_probability</span>(<span class="ruby-identifier">alpha</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">td</span>.<span class="ruby-identifier">inverse_probability</span>(<span class="ruby-identifier">beta</span>)) <span class="ruby-operator">*</span>
+        <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">pooled_variance_estimate</span>)) <span class="ruby-operator">/</span> <span class="ruby-identifier">signal</span>) <span class="ruby-operator">**</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="sum-method" class="method-detail ">
+				<a name="M000089"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sum</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the sum of all measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sum-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1075</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sum</span>
+      <span class="ruby-ivar">@sum</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="sum-of-squares-method" class="method-detail ">
+				<a name="M000084"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sum_of_squares</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the sum of squares (the sum of the squared deviations) of the
+measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sum-of-squares-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1048</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sum_of_squares</span>
+      <span class="ruby-ivar">@sum_of_squares</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@measurements</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span><span class="ruby-value">.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">t</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">arithmetic_mean</span>) <span class="ruby-operator">**</span> <span class="ruby-value">2</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="t-student-method" class="method-detail ">
+				<a name="M000103"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">t_student</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the t value of the Student&#8217;s t-test between this <a
+href="Analysis.html">Analysis</a> instance and the <tt>other</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="t-student-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1200</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">t_student</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-identifier">signal</span> = <span class="ruby-identifier">arithmetic_mean</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">arithmetic_mean</span>
+      <span class="ruby-identifier">noise</span> = <span class="ruby-identifier">common_standard_deviation</span>(<span class="ruby-identifier">other</span>) <span class="ruby-operator">*</span>
+        <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">**</span> <span class="ruby-value">-1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">**</span> <span class="ruby-value">-1</span>)
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EDOM</span>
+      <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="t-welch-method" class="method-detail ">
+				<a name="M000099"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">t_welch</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the t value of the Welch&#8217;s t-test between this <a
+href="Analysis.html">Analysis</a> instance and the <tt>other</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="t-welch-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1171</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">t_welch</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-identifier">signal</span> = <span class="ruby-identifier">arithmetic_mean</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">arithmetic_mean</span>
+      <span class="ruby-identifier">noise</span> = <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">+</span>
+        <span class="ruby-identifier">other</span>.<span class="ruby-identifier">sample_variance</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span>)
+      <span class="ruby-identifier">signal</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">noise</span>
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EDOM</span>
+      <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="variance-method" class="method-detail ">
+				<a name="M000082"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">variance</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the variance of the measurements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="variance-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1037</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">variance</span>
+      <span class="ruby-ivar">@variance</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">sum_of_squares</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">size</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

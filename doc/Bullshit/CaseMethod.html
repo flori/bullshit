@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Bullshit::CaseMethod</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/bullshit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/bullshit.rb">lib/bullshit.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000119">#after_name</a></li>
+					
+					<li><a href="#M000123">#after_run</a></li>
+					
+					<li><a href="#M000118">#before_name</a></li>
+					
+					<li><a href="#M000122">#before_run</a></li>
+					
+					<li><a href="#M000121">#cover?</a></li>
+					
+					<li><a href="#M000124">#file_path</a></li>
+					
+					<li><a href="#M000125">#load</a></li>
+					
+					<li><a href="#M000116">#long_name</a></li>
+					
+					<li><a href="#M000117">#setup_name</a></li>
+					
+					<li><a href="#M000115">#short_name</a></li>
+					
+					<li><a href="#M000120">#teardown_name</a></li>
+					
+					<li><a href="#M000126">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Bullshit.html">Bullshit</a></li>
+				
+					<li><a href="../Bullshit/Analysis.html">Bullshit::Analysis</a></li>
+				
+					<li><a href="../Bullshit/BullshitException.html">Bullshit::BullshitException</a></li>
+				
+					<li><a href="../Bullshit/Case.html">Bullshit::Case</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension.html">Bullshit::Case::CaseExtension</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Autocorrelation.html">Bullshit::Case::CaseExtension::Autocorrelation</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Covering.html">Bullshit::Case::CaseExtension::Covering</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/Histogram.html">Bullshit::Case::CaseExtension::Histogram</a></li>
+				
+					<li><a href="../Bullshit/Case/CaseExtension/TruncateData.html">Bullshit::Case::CaseExtension::TruncateData</a></li>
+				
+					<li><a href="../Bullshit/CaseMethod.html">Bullshit::CaseMethod</a></li>
+				
+					<li><a href="../Bullshit/ChiSquareDistribution.html">Bullshit::ChiSquareDistribution</a></li>
+				
+					<li><a href="../Bullshit/Clock.html">Bullshit::Clock</a></li>
+				
+					<li><a href="../Bullshit/CommonConstants.html">Bullshit::CommonConstants</a></li>
+				
+					<li><a href="../Bullshit/Comparison.html">Bullshit::Comparison</a></li>
+				
+					<li><a href="../Bullshit/ContinuedFraction.html">Bullshit::ContinuedFraction</a></li>
+				
+					<li><a href="../Bullshit/EvaluationModule.html">Bullshit::EvaluationModule</a></li>
+				
+					<li><a href="../Bullshit/Functions.html">Bullshit::Functions</a></li>
+				
+					<li><a href="../Bullshit/Histogram.html">Bullshit::Histogram</a></li>
+				
+					<li><a href="../Bullshit/LinearRegression.html">Bullshit::LinearRegression</a></li>
+				
+					<li><a href="../Bullshit/ModuleFunctions.html">Bullshit::ModuleFunctions</a></li>
+				
+					<li><a href="../Bullshit/NewtonBisection.html">Bullshit::NewtonBisection</a></li>
+				
+					<li><a href="../Bullshit/NormalDistribution.html">Bullshit::NormalDistribution</a></li>
+				
+					<li><a href="../Bullshit/RangeCase.html">Bullshit::RangeCase</a></li>
+				
+					<li><a href="../Bullshit/RepeatCase.html">Bullshit::RepeatCase</a></li>
+				
+					<li><a href="../Bullshit/TDistribution.html">Bullshit::TDistribution</a></li>
+				
+					<li><a href="../Bullshit/TimeCase.html">Bullshit::TimeCase</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Bullshit::CaseMethod</h1>
+
+		<div id="description">
+			<p>
+This class&#8217; instance represents a method to be benchmarked.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="comment-attribute-method" class="method-detail">
+				<a name="comment"></a>
+				
+				<a name="comment="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">comment</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The comment for this method.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="after-name-method" class="method-detail ">
+				<a name="M000119"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">after_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the <a href="CaseMethod.html#M000119">after_name</a>, e. g.
+&#8220;after_foo&#8220;.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="after-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1374</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_name</span>
+      <span class="ruby-value str">'after_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">short_name</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="after-run-method" class="method-detail ">
+				<a name="M000123"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">after_run</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Call after method of this <a href="CaseMethod.html">CaseMethod</a> after
+benchmarking it.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="after-run-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1397</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_run</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">after_name</span>
+        <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Calling #{after_name}.&quot;</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">after_name</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="before-name-method" class="method-detail ">
+				<a name="M000118"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">before_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the <a href="CaseMethod.html#M000118">before_name</a>, e. g.
+&#8220;before_foo&#8220;.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="before-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1369</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">before_name</span>
+      <span class="ruby-value str">'before_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">short_name</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="before-run-method" class="method-detail ">
+				<a name="M000122"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">before_run</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Call before method of this <a href="CaseMethod.html">CaseMethod</a> before
+benchmarking it.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="before-run-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1389</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">before_run</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">before_name</span>
+        <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Calling #{before_name}.&quot;</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">before_name</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="cover--method" class="method-detail ">
+				<a name="M000121"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cover?</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return true if this CaseMethod#clock covers other.clock.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cover--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1384</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cover?</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-identifier">clock</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">clock</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="file-path-method" class="method-detail ">
+				<a name="M000124"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path</span><span
+						class="method-args">(type = nil, suffix = '.dat')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the file name for <tt>type</tt> with <tt>suffix</tt> (if any) for
+this clock.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1405</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path</span>(<span class="ruby-identifier">type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">suffix</span> = <span class="ruby-value str">'.dat'</span>)
+      <span class="ruby-identifier">name</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">benchmark_name</span>.<span class="ruby-identifier">dup</span>
+      <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'#'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">short_name</span>
+      <span class="ruby-identifier">type</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'-'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">type</span>
+      <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">suffix</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">name</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">output_dir</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="load-method" class="method-detail ">
+				<a name="M000125"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load</span><span
+						class="method-args">(fp = file_path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Load the data of file <tt>fp</tt> into this clock.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1414</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load</span>(<span class="ruby-identifier">fp</span> = <span class="ruby-identifier">file_path</span>)
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clock</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">case</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">clock</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">self</span>
+      <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Loading '#{fp}' into clock.&quot;</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">fp</span>, <span class="ruby-value str">'r'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">f</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp!</span>
+          <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^\s*#/</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">next</span>
+          <span class="ruby-identifier">clock</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">self</span>
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="long-name-method" class="method-detail ">
+				<a name="M000116"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">long_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the <a href="CaseMethod.html#M000116">long_name</a> of this <a
+href="CaseMethod.html">CaseMethod</a> of the form Foo#bar.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="long-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1357</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">long_name</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-node">&quot;#{self.case}##{short_name}&quot;</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-node">&quot;#{result} (#{comment})&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">comment</span>
+      <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="CaseMethod.html#M000126">to_s</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="setup-name-method" class="method-detail ">
+				<a name="M000117"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">setup_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the <a href="CaseMethod.html#M000117">setup_name</a>, e. g.
+&#8220;setup_foo&#8220;.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="setup-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1364</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_name</span>
+      <span class="ruby-value str">'setup_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">short_name</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="short-name-method" class="method-detail ">
+				<a name="M000115"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">short_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the short name of this <a href="CaseMethod.html">CaseMethod</a>
+instance, that is without the &#8220;benchmark_&#8221; prefix, e. g.
+&#8220;foo&#8221;.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="short-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1349</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">short_name</span>
+      <span class="ruby-ivar">@short_name</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/\Abenchmark_/</span>, <span class="ruby-value str">''</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="teardown-name-method" class="method-detail ">
+				<a name="M000120"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">teardown_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the <a href="CaseMethod.html#M000120">teardown_name</a>, e. g.
+&#8220;teardown_foo&#8220;.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="teardown-name-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/bullshit.rb, line 1379</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">teardown_name</span>
+      <span class="ruby-value str">'teardown_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">short_name</span>
+    <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail method-alias">
+				<a name="M000126"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alias for <a href="CaseMethod.html#M000116">long_name</a>
+</p>
+					
+
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
