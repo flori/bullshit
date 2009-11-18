@@ -1,4 +1,8 @@
 2009-10-17 (0.1.1)
   * Added the display of a speedup matrix in the comparison.
+  * Added a bs_compare executble in order to compare data files.
+  * A lot of smaller changes, esp. make comparing more robust by skipping
+    unavailable data files.
+  * throw_raise example added.
 2009-08-31 (0.1.0)
   * Initial Release Version
