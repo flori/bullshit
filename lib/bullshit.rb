@@ -1189,8 +1189,8 @@ module Bullshit
     # Returns an estimation of the common variance of the measurements of this
     # and +other+.
     def common_variance(other)
-      (size - 1) * sample_variance + (other.size - 1) * other.sample_variance /
-        (size + other.size - 2)
+      (size - 1) * sample_variance + (other.size - 1) *
+        other.sample_variance / (size + other.size - 2)
     end
 
     # Compute the # degrees of freedom for Student's t-test.
