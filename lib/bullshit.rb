@@ -1156,7 +1156,10 @@ module Bullshit
       result
     end
 
-    alias median percentile
+    # Returns the median of the measurements.
+    def median
+      @median ||= percentile
+    end
 
     # Use an approximation of the Welch-Satterthwaite equation to compute the
     # degrees of freedom for Welch's t-test.
