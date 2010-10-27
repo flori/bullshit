@@ -1,3 +1,6 @@
+2011-07-14 (0.1.2)
+  * Extract mathemacial computations into its own gem.
+  * Use gem_hadar to shorten Rakefile
 2009-10-17 (0.1.1)
   * Added the display of a speedup matrix in the comparison.
   * Added a bs_compare executble in order to compare data files.
