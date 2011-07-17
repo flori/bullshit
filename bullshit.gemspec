@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email = %q{flori@ping.de}
   s.executables = ["bs_compare"]
   s.extra_rdoc_files = ["README.rdoc", "lib/bullshit/version.rb", "lib/bullshit.rb"]
-  s.files = [".gitignore", "CHANGES", "COPYING", "Gemfile", "README.rdoc", "Rakefile", "VERSION", "bin/bs_compare", "bullshit.gemspec", "data/.keep", "examples/compare.rb", "examples/fibonacci.rb", "examples/iteration.rb", "examples/josephus.rb", "examples/sorting.rb", "examples/throw_raise.rb", "file-tail.gemspec", "lib/bullshit.rb", "lib/bullshit/version.rb", "tests/test_bullshit.rb", "tests/test_window.rb"]
+  s.files = [".gitignore", ".travis.yml", "CHANGES", "COPYING", "Gemfile", "README.rdoc", "Rakefile", "VERSION", "bin/bs_compare", "bullshit.gemspec", "data/.keep", "examples/compare.rb", "examples/fibonacci.rb", "examples/iteration.rb", "examples/josephus.rb", "examples/sorting.rb", "examples/throw_raise.rb", "lib/bullshit.rb", "lib/bullshit/version.rb", "tests/test_bullshit.rb", "tests/test_window.rb"]
   s.homepage = %q{http://flori.github.com/bullshit}
   s.rdoc_options = ["--title", "Bullshit -- Benchmarking in Ruby", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
