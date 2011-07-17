@@ -1,86 +1,33 @@
-begin
-  require 'rake/gempackagetask'
-rescue LoadError
-end
-require 'rake/clean'
-require 'rbconfig'
-include Config
+# vim: set filetype=ruby et sw=2 ts=2:
 
-PKG_NAME = 'bullshit'
-PKG_VERSION = File.read('VERSION').chomp
-PKG_FILES = FileList['**/*'].exclude(/^(doc|CVS|pkg|coverage)/)
-CLEAN.include 'coverage', 'doc'
-CLOBBER.include FileList['data/*']
+require 'gem_hadar'
 
-desc "Run unit tests"
-task :test do
-  sh %{RUBYOPT="-Ilib $RUBYOPT" testrb tests/*.rb}
-end
+GemHadar do
+  name        'bullshit'
+  author      'Florian Frank'
+  email       'flori@ping.de'
+  homepage    "http://flori.github.com/#{name}"
+  summary     'Benchmarking is Bullshit'
+  description 'Library to benchmark ruby code and analyse the results'
+  test_dir    'tests'
+  ignore      '.*.sw[pon]', 'pkg', 'Gemfile.lock'
+  readme      'README.rdoc'
+  title       "#{name.camelize} -- Benchmarking in Ruby"
+  executables  << 'bs_compare'
 
-desc "Testing library with coverage"
-task :coverage do
-  sh 'rcov -x tests -Ilib tests/*.rb'
-end
+  dependency  'spruz', '~>0.2'
+  dependency  'dslkit', '~>0.2'
+  dependency  'more_math', '~>0.0.1'
+  clobber     'data/*.{dat,log}'
 
-desc "Installing library"
-task :install  do
-  ruby 'install.rb'
-end
-
-desc "Creating documentation"
-task :doc do
-  ruby 'make_doc.rb'
-end
-
-if defined? Gem
-  spec = Gem::Specification.new do |s|
-    s.name = PKG_NAME
-    s.version = PKG_VERSION
-    s.summary = "Benchmarking is Bullshit"
-    s.description = ""
-
-    s.add_dependency('dslkit', '>= 0.2.5')
-
-    s.files = PKG_FILES
-
-    s.require_path = 'lib'
-    s.executables = 'bs_compare'
-
-    s.has_rdoc = true
-    s.rdoc_options <<
-      '--title' <<  'Bullshit -- Benchmarking in Ruby' << '--main' << 'README'
-    s.extra_rdoc_files << 'README'
-    s.test_files = Dir['tests/*.rb']
-
-    s.author = "Florian Frank"
-    s.email = "flori@ping.de"
-    s.homepage = "http://flori.github.com/#{PKG_NAME}"
-    s.rubyforge_project = PKG_NAME
-  end
-
-  Rake::GemPackageTask.new(spec) do |pkg|
-    pkg.need_tar = true
-    pkg.package_files += PKG_FILES
+  install_library do
+    libdir = CONFIG["sitelibdir"]
+    install('lib/bullshit.rb', libdir, :mode => 0644)
+    mkdir_p subdir = File.join(libdir, 'bullshit')
+    for f in Dir['lib/bullshit/*.rb']
+      install(f, subdir)
+    end
+    bindir = CONFIG["bindir"]
+    install('bin/bs_compare', bindir, :mode => 0755)
   end
 end
-
-desc m = "Writing version information for #{PKG_VERSION}"
-task :version do
-  puts m
-  File.open(File.join('lib', PKG_NAME, 'version.rb'), 'w') do |v|
-    v.puts <<EOT
-module Bullshit
-  # Bullshit version
-  VERSION         = '#{PKG_VERSION}'
-  VERSION_ARRAY   = VERSION.split(/\\./).map { |x| x.to_i } # :nodoc:
-  VERSION_MAJOR   = VERSION_ARRAY[0] # :nodoc:
-  VERSION_MINOR   = VERSION_ARRAY[1] # :nodoc:
-  VERSION_BUILD   = VERSION_ARRAY[2] # :nodoc:
-end
-EOT
-  end
-end
-
-task :default => [ :version, :test ]
-
-task :release => [ :clobber, :version, :package ]
