@@ -15,9 +15,9 @@ GemHadar do
   title       "#{name.camelize} -- Benchmarking in Ruby"
   executables  << 'bs_compare'
 
-  dependency  'spruz', '~>0.2'
-  dependency  'dslkit', '~>0.2'
-  dependency  'more_math', '~>0.0.1'
+  dependency  'tins',      '~>0.3'
+  dependency  'dslkit',    '~>0.2'
+  dependency  'more_math', '~>0.0.2'
   clobber     'data/*.{dat,log}'
 
   install_library do
