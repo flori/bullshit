@@ -15,7 +15,7 @@ module MyCases
   def setup_for
     @test_setup = true
   end
-  
+
   def benchmark_for
     a = []
     for i in 1 .. @n

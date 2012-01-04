@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'test/unit'
+require 'test_helper'
 require 'bullshit'
 
 module MyCases
@@ -22,7 +22,7 @@ module MyCases
     @befores += 1
     @before_foo = true
   end
-  
+
   def benchmark_foo
     @benchmark_foo = true
     @args_foo = args rescue nil
@@ -45,7 +45,7 @@ module MyCases
   def before_bar
     @before_bar = true
   end
-  
+
   def benchmark_bar
     @benchmark_bar = true
   end
@@ -111,7 +111,7 @@ class RangeBenchmark < Bullshit::RangeCase
   include MyCases
 end
 
-class TestBullshit < Test::Unit::TestCase
+class BullshitTest < Test::Unit::TestCase
   include Bullshit
   Case.autorun false
 

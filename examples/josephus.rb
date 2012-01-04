@@ -21,9 +21,9 @@ module Original
       @next.prev = @prev
       return 1
     end
-  end      
+  end
 
-  class Chain 
+  class Chain
     attr_reader :first
     attr_writer :first
 
@@ -74,9 +74,9 @@ module Improved
       @next.prev = @prev
       1
     end
-  end      
+  end
 
-  class Chain 
+  class Chain
     attr_accessor :first
 
     def initialize(size)

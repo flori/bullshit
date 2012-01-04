@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'test/unit'
+require 'test_helper'
 require 'bullshit'
 
-class TestWindow < Test::Unit::TestCase
+class WindowTest < Test::Unit::TestCase
   include Bullshit::ModuleFunctions
 
   def array_windows(array, window_size)

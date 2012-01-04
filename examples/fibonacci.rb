@@ -34,7 +34,7 @@ class FibonacciBenchmark < Bullshit::RepeatCase
     a, b = 0, 1
     while (n -= 1) >= 0
         a, b = a + b, a
-    end 
+    end
     a
   end
 

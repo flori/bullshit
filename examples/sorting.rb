@@ -67,7 +67,7 @@ class SortingBenchmark < Bullshit::RangeCase
   alias after_quicksort_sorted check_result
 
   # Quicksort in Ruby with median pivot
-  
+
   def find_median_index(orig_a)
     a = orig_a.dup
     k = a.size / 2
@@ -182,7 +182,7 @@ class SortingBenchmark < Bullshit::RangeCase
     for i in 1...a.size
       j, x = i - 1, a[i]
       while j >= 0 and a[j] > x
-        a[j + 1] = a[j] 
+        a[j + 1] = a[j]
         j -= 1
       end
       a[j + 1] = x
@@ -277,7 +277,7 @@ class SortingBenchmark < Bullshit::RangeCase
     when b.empty?          then a
     when a.first < b.first then a[0, 1].concat merge(a[1..-1], b)
     else                        b[0, 1].concat merge(a, b[1..-1])
-    end 
+    end
   end
 
   def mergesort(a)
