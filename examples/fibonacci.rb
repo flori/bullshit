@@ -23,6 +23,8 @@ class FibonacciBenchmark < Bullshit::RepeatCase
     file        yes
   end
 
+  detect_outliers yes
+
   MIN_N =   10_000
   RANGE_N = 100
 

@@ -1,4 +1,5 @@
 .*.sw[pon]
+.rbx
 Gemfile.lock
 coverage
 data

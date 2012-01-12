@@ -227,7 +227,7 @@ module Bullshit
     # :median and :iqr parameters. If no outliers were found or the iqr is less
     # than epsilon, nil is returned.
     def detect_outliers(time)
-      analysis[time.to_sym].detect_outliers(self.case.outliers_factor.abs)
+      analysis[time.to_sym].detect_outliers(self.case.detect_outliers.factor.abs)
     end
 
     TIMES.each do |time|

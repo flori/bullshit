@@ -31,7 +31,7 @@ module Bullshit
 
     def detect_outliers(clock)
       result = ''
-      if clock.case.detect_outliers and
+      if clock.case.detect_outliers.enabled and
         outliers = clock.detect_outliers(clock.case.compare_time)
       then
         result << "\nOutliers detected with box plot algo "\
