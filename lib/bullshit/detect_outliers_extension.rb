@@ -1,10 +1,5 @@
 module Bullshit
-  class DetectOutliers
-    extend DSLKit::DSLAccessor
-    extend DSLKit::Constant
-
-    include CommonConstants
-
+  class DetectOutliers < BaseExtension
     dsl_accessor :enabled, true
 
     dsl_accessor :factor, 3.0

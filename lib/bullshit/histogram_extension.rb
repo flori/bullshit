@@ -1,11 +1,6 @@
 module Bullshit
   module HistogramExtension
-    class Histogram
-      extend DSLKit::DSLAccessor
-      extend DSLKit::Constant
-
-      include CommonConstants
-
+    class Histogram < BaseExtension
       dsl_accessor :bins, 10
 
       dsl_accessor :enabled, false

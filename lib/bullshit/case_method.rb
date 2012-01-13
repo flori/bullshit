@@ -65,7 +65,7 @@ module Bullshit
       name << '#' << short_name
       type and name << '-' << type
       name << suffix
-      File.expand_path(name, self.case.class.output_dir)
+      File.expand_path(name, self.case.class.output.dir)
     end
 
     # Load the data of file +fp+ into this clock.

@@ -1,11 +1,14 @@
+require 'bullshit/base_extension'
+
 module Bullshit
   module OutputExtension
-    class Output
-      extend DSLKit::Constant
-      extend DSLKit::DSLAccessor
+    class Output < BaseExtension
 
       def initialize(&block)
-        block and instance_eval(&block)
+        if block
+          super(&block)
+          instance_eval(&block)
+        end
       end
 
       dsl_accessor :file, STDOUT

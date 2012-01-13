@@ -46,8 +46,6 @@ module Bullshit
 
     dsl_accessor :data_file, false
 
-    dsl_accessor :output_dir, Dir.pwd
-
     dsl_accessor :linear_regression, true
   end
 end

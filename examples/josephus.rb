@@ -115,10 +115,12 @@ class JosephusBenchmark < Bullshit::RepeatCase
 
   N = 1001 # 41
 
-  output_dir              'data'
   data_file               yes
 
-  output_filename         "#{benchmark_name}.log"
+  output do
+    dir      'data'
+    filename "#{benchmark_name}.log"
+  end
 
   histogram do
     bins 20

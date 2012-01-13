@@ -1,8 +1,6 @@
 module Bullshit
   module CoveringExtension
-    class Covering
-      extend DSLKit::DSLAccessor
-
+    class Covering < BaseExtension
       dsl_accessor :alpha_level, 0.05
 
       dsl_accessor :beta_level, 0.05

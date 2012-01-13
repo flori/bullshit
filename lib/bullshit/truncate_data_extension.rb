@@ -1,12 +1,6 @@
 module Bullshit
   module TruncateDataExtension
-    class TruncateData
-      extend DSLKit::DSLAccessor
-      extend DSLKit::Constant
-
-      include CommonConstants
-      include ModuleFunctions
-
+    class TruncateData < BaseExtension
       dsl_accessor :alpha_level, 0.05
 
       dsl_accessor :window_size, 10

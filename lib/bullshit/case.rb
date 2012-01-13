@@ -4,6 +4,8 @@ require 'bullshit/output_extension'
 module Bullshit
   # This is the base class of all Benchmarking Cases.
   class Case
+    include EvaluationModule
+
     class << self
       def inherited(klass)
         klass.extend CaseExtension

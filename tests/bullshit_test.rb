@@ -65,8 +65,10 @@ class RepeatBenchmark < Bullshit::RepeatCase
   warmup      yes
   iterations  200
 
-  output_dir      'data'
-  output_filename "#{benchmark_name}.log"
+  output do
+    dir      'data'
+    filename "#{benchmark_name}.log"
+  end
   data_file       yes
 
   autocorrelation do
@@ -86,8 +88,10 @@ class TimeBenchmark < Bullshit::TimeCase
 
   benchmark_name 'ZeitBenchmark'
 
-  output_dir      'data'
-  output_filename "#{benchmark_name}.log"
+  output do
+    dir      'data'
+    filename "#{benchmark_name}.log"
+  end
   data_file       yes
 
   autocorrelation no
@@ -102,8 +106,10 @@ class RangeBenchmark < Bullshit::RangeCase
   range     1..10
   scatter   3
 
-  output_dir      'data'
-  output_filename "#{benchmark_name}.log"
+  output do
+    dir      'data'
+    filename "#{benchmark_name}.log"
+  end
   data_file       yes
 
   histogram no

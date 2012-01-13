@@ -1,11 +1,6 @@
 module Bullshit
   module AutocorrelationExtension
-    class Autocorrelation
-      extend DSLKit::DSLAccessor
-      extend DSLKit::Constant
-
-      include CommonConstants
-
+    class Autocorrelation < BaseExtension
       dsl_accessor :n_limit, 50
 
       dsl_accessor :alpha_level, 0.05
