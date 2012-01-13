@@ -1,3 +1,5 @@
+require 'bullshit/output_extension'
+
 module Bullshit
   # A Comparison instance compares the benchmark results of different
   # case methods and outputs the results.
@@ -6,16 +8,7 @@ module Bullshit
     extend DSLKit::DSLAccessor
 
     include CommonConstants
-
-    dsl_accessor :output, STDOUT
-
-    dsl_accessor :output_dir, Dir.pwd
-
-    # Output results to the file named +name+.
-    def output_filename(name)
-      path = File.expand_path(name, output_dir)
-      output File.new(path, 'a+')
-    end
+    include OutputExtension
 
     # Return a comparison object configured by +block+.
     def initialize(&block)
@@ -100,14 +93,14 @@ module Bullshit
 
     # Output all speed comparisons between methods.
     def display
-      output.puts Time.now.strftime(' %FT%T %Z ').center(COLUMNS, '=')
+      output.file.puts Time.now.strftime(' %FT%T %Z ').center(COLUMNS, '=')
       for comparator in [ :call_time_mean, :call_time_median ]
-        output.puts
+        output.file.puts
         cmethods = compare_methods(comparator)
         cmethods.size < 2 and return
-        output.puts "Comparing times (#{comparator}):"
+        output.file.puts "Comparing times (#{comparator}):"
         cmethods.each_with_index do |m, i|
-          output.printf\
+          output.file.printf\
             "% 2u #{prefix_string(m)}\n   %17.9f"\
             " (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
             "   %17.9f %8.2f %17.9f\n",
@@ -116,30 +109,30 @@ module Bullshit
             m.clock.sample_standard_deviation_percentage(m.case.class.compare_time),
             m.clock.sum(m.case.class.compare_time)
         end
-        output.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
+        output.file.puts "   %17s (%#{::Bullshit::Clock::TIMES_MAX}s) %s\n"\
                     "   %17s %8s %17s\n"\
                     % %w[calls/sec time covers secs/call std% sum]
         display_speedup_matrix(cmethods, comparator)
       end
-      output.puts '=' * COLUMNS
+      output.file.puts '=' * COLUMNS
     end
 
     private
 
     def display_speedup_matrix(cmethods, comparator)
-      output.print "\n", " " * 3
+      output.file.print "\n", " " * 3
       cmethods.size.times do |i|
-        output.printf "%7d ", i + 1
+        output.file.printf "%7d ", i + 1
       end
-      output.puts
+      output.file.puts
       cmethods.each_with_index do |x, i|
-        output.printf "%2d ", i + 1
+        output.file.printf "%2d ", i + 1
         cmethods.each do |y|
           ratio = x.clock.calls(comparator).to_f / y.clock.calls(comparator)
           ratio /= 0.0 if ratio >= 1000
-          output.printf "%7.2f ", ratio
+          output.file.printf "%7.2f ", ratio
         end
-        output.puts
+        output.file.puts
       end
     end
 

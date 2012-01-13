@@ -19,8 +19,6 @@ module Bullshit
         "Running '#{self}' for a duration of #{duration} secs/method"\
           " (compare_time=#{compare_time}):"
       end
-
-      dsl_accessor(:output) { ::Bullshit::Case.output }
     end
 
     # Returns the evaluation for +bullshit_case+ with the results of the

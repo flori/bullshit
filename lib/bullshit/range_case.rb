@@ -25,8 +25,6 @@ module Bullshit
           " (compare_time=#{compare_time})"
       end
 
-      dsl_accessor(:output) { ::Bullshit::Case.output }
-
       attr_accessor :args
     end
 

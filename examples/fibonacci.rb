@@ -13,7 +13,9 @@ class FibonacciBenchmark < Bullshit::RepeatCase
     slope_angle 0.003
   end
 
-  output_dir 'data'
+  output do
+    dir 'data'
+  end
   data_file  yes
   histogram  yes
 

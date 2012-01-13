@@ -18,7 +18,7 @@ module Bullshit
       end
     end
 
-    def ouput(file = nil, &block)
+    def output(file = nil, &block)
       @output ||= Output.new(&block)
       if file.nil? and !block
         @output

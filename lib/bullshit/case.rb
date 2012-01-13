@@ -1,4 +1,5 @@
 require 'bullshit/case_extension'
+require 'bullshit/output_extension'
 
 module Bullshit
   # This is the base class of all Benchmarking Cases.
@@ -8,16 +9,10 @@ module Bullshit
         klass.extend CaseExtension
       end
 
+      include OutputExtension
       extend DSLKit::DSLAccessor
 
       dsl_reader :cases, []
-
-      dsl_accessor :output, STDOUT
-
-      def output_filename(name)
-        path = File.expand_path(name, output_dir)
-        output File.new(path, 'a+')
-      end
 
       # Returns the total number of run counts +run_count+.
       def run_count
@@ -55,7 +50,7 @@ module Bullshit
       @clocks = []
       if self.class.comparison
         @comparison = Comparison.new
-        @comparison.output self.class.output
+        @comparison.output.file self.class.output.file
       end
     end
 
@@ -97,33 +92,33 @@ module Bullshit
     # Run benchmark case once and output results.
     def run_once
       self.class.run_count(self.class.run_count + 1)
-      self.class.output.puts Time.now.strftime(' %FT%T %Z ').center(COLUMNS, '=')
-      self.class.output.puts "Benchmarking on #{RUBY_DESCRIPTION}."
-      self.class.output.puts self.class.message
-      self.class.output.puts '=' * COLUMNS, ''
+      self.class.output.file.puts Time.now.strftime(' %FT%T %Z ').center(COLUMNS, '=')
+      self.class.output.file.puts "Benchmarking on #{RUBY_DESCRIPTION}."
+      self.class.output.file.puts self.class.message
+      self.class.output.file.puts '=' * COLUMNS, ''
       @clocks.clear
       if self.class.warmup == :aggressive
-        self.class.output.puts "Aggressively run all benchmarks for warmup first.", ''
+        self.class.output.file.puts "Aggressively run all benchmarks for warmup first.", ''
         bmethods.each do |bc_method|
           GC.start
           clock = run_method bc_method
-          self.class.output.puts evaluation(clock)
+          self.class.output.file.puts evaluation(clock)
           GC.start
         end
-        self.class.output.puts "Aggressive warmup done.", '', '=' * COLUMNS, ''
+        self.class.output.file.puts "Aggressive warmup done.", '', '=' * COLUMNS, ''
       end
       first = true
       bmethods.each do |bc_method|
         if first
           first = false
         else
-          self.class.output.puts '-' * COLUMNS, ''
+          self.class.output.file.puts '-' * COLUMNS, ''
         end
         if self.class.warmup
-          self.class.output.puts "This first run is only for warmup."
+          self.class.output.file.puts "This first run is only for warmup."
           GC.start
           clock = run_method bc_method
-          self.class.output.puts evaluation(clock)
+          self.class.output.file.puts evaluation(clock)
           GC.start
         end
         clock = run_method(bc_method)
@@ -161,9 +156,9 @@ module Bullshit
               offset_percentage)
             clock.truncate_data(offset)
           end
-          self.class.output.puts evaluation(clock), message
+          self.class.output.file.puts evaluation(clock), message
         else
-          self.class.output.puts evaluation(clock)
+          self.class.output.file.puts evaluation(clock)
         end
         @clocks << clock
         if @comparison
@@ -179,7 +174,7 @@ module Bullshit
     # Setup, run all benchmark cases (warmup and the real run) and output
     # results, run method speed comparisons, and teardown.
     def run(do_compare = true)
-      old_sync, self.class.output.sync = self.class.output.sync, true
+      old_sync, self.class.output.file.sync = self.class.output.file.sync, true
       $DEBUG and warn "Calling setup."
       setup
       run_once
@@ -191,7 +186,7 @@ module Bullshit
       $DEBUG and warn "Calling teardown."
       teardown
       @clocks and write_files
-      self.class.output.sync = old_sync
+      self.class.output.file.sync = old_sync
     end
 
     # Creates an instance of this class and run it.
@@ -203,7 +198,7 @@ module Bullshit
     def write_files
       for clock in @clocks
         if clock.case.data_file data_file_path = clock.file_path
-          self.class.output.puts "Writing measurement data file '#{data_file_path}'."
+          self.class.output.file.puts "Writing measurement data file '#{data_file_path}'."
           File.open(data_file_path, 'w') do |data_file|
             data_file.puts clock.class.to_a * "\t"
             data_file.puts clock.to_a.map { |times| times * "\t" }
@@ -211,7 +206,7 @@ module Bullshit
         end
         if clock.case.histogram.enabled and clock.case.histogram.file
           histogram_file_path = clock.file_path 'histogram'
-          self.class.output.puts "Writing histogram file '#{histogram_file_path}'."
+          self.class.output.file.puts "Writing histogram file '#{histogram_file_path}'."
           File.open(histogram_file_path, 'w') do |data_file|
             data_file.puts %w[#binleft frequency binright] * "\t"
             data_file.puts clock.histogram(clock.case.compare_time).to_a.map { |times| times * "\t" }
@@ -219,7 +214,7 @@ module Bullshit
         end
         if clock.case.autocorrelation.enabled and clock.case.autocorrelation.file
           ac_plot_file_path = clock.file_path 'autocorrelation'
-          self.class.output.puts "Writing autocorrelation plot file '#{ac_plot_file_path}'."
+          self.class.output.file.puts "Writing autocorrelation plot file '#{ac_plot_file_path}'."
           File.open(ac_plot_file_path, 'w') do |data_file|
             data_file.puts %w[#lag autocorrelation] * "\t"
             data_file.puts clock.autocorrelation_plot(clock.case.compare_time).to_a.map { |ac| ac * "\t" }
@@ -235,7 +230,7 @@ module Bullshit
         $DEBUG and warn "Calling #{setup_name}."
         __send__(setup_name)
       end
-      self.class.output.puts "#{bc_method.long_name}:"
+      self.class.output.file.puts "#{bc_method.long_name}:"
     end
 
     # Run only pre_run and post_run methods. Yield to the block, if one was
