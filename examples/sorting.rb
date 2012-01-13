@@ -9,7 +9,9 @@ class SortingBenchmark < Bullshit::RangeCase
   scatter                 3
 
   data_file               yes
-  output_dir              'data'
+  output do
+    dir 'data'
+  end
 
   def prepare_random_array
     @ary = Array.new(args) { rand(args * 10) }

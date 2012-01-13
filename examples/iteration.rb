@@ -86,7 +86,9 @@ class IterationTimeBenchmark < Bullshit::TimeCase
     file yes
   end
 
-  output_dir          'data'
+  output do
+    dir 'data'
+  end
   data_file           yes
 
   histogram           yes
@@ -105,7 +107,9 @@ class IterationRepeatBenchmark < Bullshit::RepeatCase
   autocorrelation     yes
 
   data_file           yes
-  output_dir          'data'
+  output do
+    dir 'data'
+  end
 
   histogram do
     bins 20

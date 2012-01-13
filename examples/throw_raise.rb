@@ -11,7 +11,9 @@ class ThrowRaise < Bullshit::RepeatCase
 
   autocorrelation         yes
 
-  output_dir              'data'
+  output do
+    dir 'data'
+  end
   data_file               yes
 
   #output_filename         "#{benchmark_name}.log"
