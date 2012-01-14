@@ -1,6 +1,8 @@
+require 'bullshit/block_configuration'
+
 module Bullshit
   module AutocorrelationExtension
-    class Autocorrelation < BaseExtension
+    class Autocorrelation < BlockConfiguration
       dsl_accessor :n_limit, 50
 
       dsl_accessor :alpha_level, 0.05

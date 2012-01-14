@@ -1,5 +1,7 @@
+require 'bullshit/block_configuration'
+
 module Bullshit
-  class BaseExtension < DSLKit::MethodMissingDelegator::DelegatorClass
+  class BlockConfiguration < DSLKit::MethodMissingDelegator::DelegatorClass
     extend DSLKit::Constant
     extend DSLKit::DSLAccessor
     include DSLKit::BlockSelf

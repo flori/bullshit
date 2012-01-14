@@ -1,6 +1,8 @@
+require 'bullshit/block_configuration'
+
 module Bullshit
   module HistogramExtension
-    class Histogram < BaseExtension
+    class Histogram < BlockConfiguration
       dsl_accessor :bins, 10
 
       dsl_accessor :enabled, false

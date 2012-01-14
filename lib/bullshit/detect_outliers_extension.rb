@@ -1,5 +1,7 @@
+require 'bullshit/block_configuration'
+
 module Bullshit
-  class DetectOutliers < BaseExtension
+  class DetectOutliers < BlockConfiguration
     dsl_accessor :enabled, true
 
     dsl_accessor :factor, 3.0

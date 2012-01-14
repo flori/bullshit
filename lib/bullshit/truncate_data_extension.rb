@@ -1,6 +1,8 @@
+require 'bullshit/block_configuration'
+
 module Bullshit
   module TruncateDataExtension
-    class TruncateData < BaseExtension
+    class TruncateData < BlockConfiguration
       dsl_accessor :alpha_level, 0.05
 
       dsl_accessor :window_size, 10

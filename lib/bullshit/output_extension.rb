@@ -1,8 +1,8 @@
-require 'bullshit/base_extension'
+require 'bullshit/block_configuration'
 
 module Bullshit
   module OutputExtension
-    class Output < BaseExtension
+    class Output < BlockConfiguration
 
       def initialize(&block)
         if block

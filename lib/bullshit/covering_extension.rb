@@ -1,6 +1,8 @@
+require 'bullshit/block_configuration'
+
 module Bullshit
   module CoveringExtension
-    class Covering < BaseExtension
+    class Covering < BlockConfiguration
       dsl_accessor :alpha_level, 0.05
 
       dsl_accessor :beta_level, 0.05
