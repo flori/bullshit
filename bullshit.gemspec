@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://flori.github.com/bullshit"
   s.rdoc_options = ["--title", "Bullshit -- Benchmarking in Ruby", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.13"
+  s.rubygems_version = "1.8.15"
   s.summary = "Benchmarking is Bullshit"
   s.test_files = ["tests/bullshit_test.rb", "tests/window_test.rb", "tests/test_helper.rb"]
 

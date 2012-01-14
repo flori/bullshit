@@ -10,7 +10,7 @@ GemHadar do
   summary     'Benchmarking is Bullshit'
   description 'Library to benchmark ruby code and analyse the results'
   test_dir    'tests'
-  ignore      '.*.sw[pon]', 'pkg', 'Gemfile.lock', 'data', 'coverage', '.rbx', '.rvmrc'
+  ignore      '.*.sw[pon]', 'pkg', 'Gemfile.lock', 'data', 'coverage', '.rbx', '.rvmrc', '*.rbc'
   readme      'README.rdoc'
   title       "#{name.camelize} -- Benchmarking in Ruby"
   executables  << 'bs_compare'
