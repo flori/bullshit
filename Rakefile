@@ -18,7 +18,7 @@ GemHadar do
   dependency  'tins',      '~>0.3'
   dependency  'dslkit',    '~>0.2.10'
   dependency  'more_math', '~>0.0.2'
-  clobber     'data/*.{dat,log}'
+  clobber     'data/*.{dat,log}', '**/*.rbc'
 
   install_library do
     libdir = CONFIG["sitelibdir"]
