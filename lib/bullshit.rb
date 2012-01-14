@@ -1,4 +1,5 @@
 require 'dslkit'
+class Object; include DSLKit::Eigenclass; end
 require 'enumerator'
 require 'more_math'
 
