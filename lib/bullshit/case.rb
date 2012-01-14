@@ -1,5 +1,6 @@
 require 'bullshit/case_extension'
 require 'bullshit/output_extension'
+require 'bullshit/evaluation_module'
 
 module Bullshit
   # This is the base class of all Benchmarking Cases.

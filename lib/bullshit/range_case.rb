@@ -6,8 +6,6 @@ module Bullshit
   # evaluation of the case doesn't check for constancy and steady-state
   # properties.
   class RangeCase < Case
-    include EvaluationModule
-
     class << self
       extend DSLKit::DSLAccessor
       extend DSLKit::Constant

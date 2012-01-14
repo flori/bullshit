@@ -3,8 +3,6 @@ require 'bullshit/case'
 module Bullshit
   # This is a Benchmarking Case that uses a repetition limit.
   class RepeatCase < Case
-    include EvaluationModule
-
     class << self
       extend DSLKit::DSLAccessor
       extend DSLKit::Constant
