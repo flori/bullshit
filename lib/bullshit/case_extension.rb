@@ -11,9 +11,6 @@ module Bullshit
       Case.cases << klass
     end
 
-    extend DSLKit::DSLAccessor
-    extend DSLKit::Constant
-
     include CommonConstants
     include ModuleFunctions
     include CoveringExtension
@@ -21,6 +18,9 @@ module Bullshit
     include TruncateDataExtension
     include AutocorrelationExtension
     include DetectOutliersExtension
+
+    extend DSLKit::DSLAccessor
+    extend DSLKit::Constant
 
     dsl_accessor :benchmark_name do name end
 

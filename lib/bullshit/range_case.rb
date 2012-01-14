@@ -7,9 +7,6 @@ module Bullshit
   # properties.
   class RangeCase < Case
     class << self
-      extend DSLKit::DSLAccessor
-      extend DSLKit::Constant
-
       constant :clock_method, :scale_range
 
       dsl_accessor :range

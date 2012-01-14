@@ -4,9 +4,6 @@ module Bullshit
   # This is a Benchmarking Case that uses a time limit.
   class TimeCase < Case
     class << self
-      extend DSLKit::DSLAccessor
-      extend DSLKit::Constant
-
       constant :clock_method, :time
 
       dsl_accessor :duration

@@ -4,9 +4,6 @@ module Bullshit
   # This is a Benchmarking Case that uses a repetition limit.
   class RepeatCase < Case
     class << self
-      extend DSLKit::DSLAccessor
-      extend DSLKit::Constant
-
       constant :clock_method, :repeat
 
       dsl_accessor :iterations

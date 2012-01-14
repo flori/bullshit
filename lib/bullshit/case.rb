@@ -9,7 +9,12 @@ module Bullshit
 
     class << self
       def inherited(klass)
+        klass.eigenclass_eval do
+          extend DSLKit::DSLAccessor
+          extend DSLKit::Constant
+        end
         klass.extend CaseExtension
+        super
       end
 
       include OutputExtension
