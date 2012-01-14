@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env ruby
 
 require 'bullshit'
@@ -5,7 +7,7 @@ require 'bullshit'
 class ThrowRaise < Bullshit::RepeatCase
   compare_time            real
   warmup                  yes
-  iterations              100
+  iterations              300
 
   N = 2_000
 
