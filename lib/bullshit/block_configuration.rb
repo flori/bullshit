@@ -5,7 +5,6 @@ module Bullshit
     extend DSLKit::Constant
     extend DSLKit::DSLAccessor
     include DSLKit::BlockSelf
-    include DSLKit::MethodMissingDelegator
     include CommonConstants
     include ModuleFunctions
 
