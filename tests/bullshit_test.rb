@@ -63,7 +63,7 @@ end
 
 class RepeatBenchmark < Bullshit::RepeatCase
   warmup      yes
-  iterations  200
+  iterations  10
 
   output do
     dir      'data'
@@ -84,7 +84,7 @@ end
 
 class TimeBenchmark < Bullshit::TimeCase
   warmup    yes
-  duration  5
+  duration  0.25
 
   benchmark_name 'ZeitBenchmark'
 
